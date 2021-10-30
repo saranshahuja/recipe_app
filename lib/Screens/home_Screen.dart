@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(title: Text("Bits and Bites"),),
       body: Column(
-        children: [
-          Text("Coding to be done here")
+        children: <Widget>[
+          Text("Coding to be done here"),
         ],
       ),
     );
