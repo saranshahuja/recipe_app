@@ -10,9 +10,10 @@ class MyApp extends StatelessWidget {
   ///this is saransh
 /// this is josh
 /// This is jeet
+  /// This is Shubham Rishi
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext conext) {
     return MaterialApp(
       title: 'Recipe App',
       theme: ThemeData(
