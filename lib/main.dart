@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/Screens/home_Screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp(
+  debugShowCheckedModeBanner: false,
+  home: MyApp(),
+  theme:   ,
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,5 +26,4 @@ class MyApp extends StatelessWidget {
       home: const HomeScreen(),
     );
   }
-}
 
