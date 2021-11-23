@@ -32,6 +32,26 @@ class MyApp extends StatelessWidget {
 
       ), //appBar
       home: const HomeScreen(),
+      //setting up search bar
+        body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20, vertical 10),
+        child: Column(
+          children: [
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20)
+                ),//border
+                fillColor: Colors.green.withOpacity(0.05),
+                filled: true
+              ), //InputDecoration
+            ) //Textfield
+            SizedBox(
+              height:15,
+            ), //sizedbox
+          ], //children
+        ), //column
+      ),// container
     ); //MaterialApp
   }
 
