@@ -1,5 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Screens/home_Screen.dart';
+
+import 'Screens/home_Screen.dart';
 
 void main() {
   runApp(const MyApp(
@@ -19,11 +23,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext conext) {
     return MaterialApp(
-      title: 'Recipe App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+  title: 'Recipe App',
+  theme: ThemeData(
+    primartSwatch: Colors.blue,),
+  appBar: AppBar(
+    elevation: 0,
+    title: Text("Recipe App"),
+
+      ), //appBar
       home: const HomeScreen(),
-    );
+    ); //MaterialApp
   }
 
