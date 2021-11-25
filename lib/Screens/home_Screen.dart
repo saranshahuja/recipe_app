@@ -16,7 +16,25 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(title: Text("Bits and Bites"),),
       body: Column(
         children: <Widget>[
-          Text("Coding to be done here"),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20)
+                      ),//border
+                      fillColor: Colors.green.withOpacity(0.05),
+                      filled: true
+                  ), //InputDecoration
+                ) ,//Textfield
+                SizedBox(
+                  height:15,
+                ), //sizedbox
+              ], //children
+            ), //column
+          ),
         ],
       ),
     );
