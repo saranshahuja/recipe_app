@@ -1,15 +1,13 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:recipe_app/Screens/home_Screen.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
-
-import 'Screens/home_Screen.dart';
+import 'package:recipe_app/Services/start_page.dart';
+import 'package:sizer/sizer.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,15 +21,20 @@ class MyApp extends StatelessWidget {
   @override
 
   ///DO NOT CHANGE THE MAIN FILE!!!!!!
-  Widget build(BuildContext conext) {
-    return MaterialApp(
+  Widget build(BuildContext context) {
+    return ProviderScope(
+      child: Sizer(
+  builder: (context, orientation, devicetype) {
+    return
+    MaterialApp(
         title: 'Recipe App',
         theme: ThemeData(
-          primarySwatch: Colors.blue,),
+          primarySwatch: Colors.blue,
+        ),
         //appBar
-        home: const HomeScreen()
+        home: StartPage());
 
+  }),
     ); //MaterialApp
   }
 }
-

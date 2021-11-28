@@ -22,23 +22,24 @@ class Login extends ConsumerWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 5.h),
       child: Container(
-        width: 20.2.w,
+        width: 80.w,
         height: 14.7.h,
         child: Column(
           children: [
-            Image(
-              fit: BoxFit.fitHeight,
-              image: AssetImage(
-                'assets/Images/uBudget Logo.png',
-              ),
-            ),
+            ///Image to be added here
+            // Image(
+            //   fit: BoxFit.fitHeight,
+            //   image: AssetImage(
+            //     ,
+            //   ),
+            // ),
             FittedBox(
               fit: BoxFit.fitWidth,
-              child: Text('uBudget',
+              child: Text('Bits and Bytes ',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 18.sp,
+                  fontSize: 45.sp,
                 ),
               ),
             )
@@ -77,93 +78,51 @@ class Login extends ConsumerWidget {
   }
 
 
-  Widget _buildForgotPass(){
-    return Row(
-      mainAxisAlignment:  MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        TextButton(onPressed:(){}, child: Text("Forgot Password?",
-          style: TextStyle(color: Colors.white),)
-        )
-      ],
-    );
 
-  }
   Widget _buildLogin(BuildContext context, ScopedReader watch, String email, String password){
     var _auth = watch(authServiesProvider);
-    email: email;
-    password:password;
 
     return Row(
       mainAxisAlignment:  MainAxisAlignment.center,
       children: <Widget>[
-        Container(
-            height: 6.63.h,
-            width: 34.6.w,
-            child: DecoratedBox(
+        Padding(
+          padding: const EdgeInsets.only(top: 15),
+          child: Container(
+              height: 8.63.h,
+              width: 40.6.w,
               decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white,width: 1),
-                  borderRadius: BorderRadius.circular(28),
-                  gradient: LinearGradient(
-                      end: Alignment(0,-1),
-                      begin: Alignment(0,1),
-                      colors: [Color(0xff014283), Color(0xff0080ff) ]
+
+                 color: const Color(0xffBADEFF),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(18.0),
                   ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 4,
-                    blurRadius: 10,
-                    offset: Offset(0, 3),
-                  )
-                ]
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: Colors.black.withOpacity(0.2),
+                  //     spreadRadius: 4,
+                  //     blurRadius: 20,
+                  //     offset: Offset(0, 3),
+                  //   )
+                  // ]
               ),
+
               child: ElevatedButton(
+
                 onPressed: ()=> _auth.SignIn(email, password),
                 style: ElevatedButton.styleFrom(primary: Colors.transparent),
                 child: Text(
                   'Login', style: TextStyle(
-                    color: Colors.white
+                    color: Colors.black
                 ),
                 ),
-              ),
-            )
+              )
+          ),
         )
 
       ],
     );
   }
-  Widget _buildOrRow(){
-    return FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Padding(
-          padding: EdgeInsets.only(top: 1.2.h),
-          child: Text("- OR -",
-            style: TextStyle(fontSize: 13.sp),
-          ),
-        )
-    );
-  }
 
-  Widget  _buildSocial(){
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        GestureDetector(
-          onTap: (){},
-          child: Container(
-            height: 7.1.h,
-            width: 7.1.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-
-            ),
-            child: Icon(Icons.home),
-          ),
-        )
-      ],
-    );
-  }
   Widget _buildContainer(BuildContext context, ScopedReader watch, String email, String password){
 
     return Row(
@@ -180,10 +139,7 @@ class Login extends ConsumerWidget {
               children: <Widget>[
                 _buildEmailRow(context  , watch ),
                 _buildPassword(context  , watch),
-                _buildForgotPass(),
                 _buildLogin(context  , watch, email, password),
-                _buildOrRow(),
-                _buildSocial()
               ],
             ),
           ),
@@ -208,13 +164,13 @@ class Login extends ConsumerWidget {
             text: TextSpan(
                 children:[
                   TextSpan(
-                      text: "Don't have an account yet? ",
+                      text: "Not a User yet? ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                       )
                   ),
                   TextSpan(
-                      text: "Click Here!",
+                      text: "Signup!",
                       style: TextStyle(
                         color: Colors.blue,
                       )
@@ -229,6 +185,8 @@ class Login extends ConsumerWidget {
     );
   }
 
+
+///another image to be added here
   Widget _buildCLogo(){
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -237,13 +195,14 @@ class Login extends ConsumerWidget {
         Container(
           height: 14.2.h,
           width: 51.2.w,
-          decoration: BoxDecoration(
-              image: DecorationImage(fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/Images/Copy of Unnamed Company (1).png',
-                  )
-              )
-          ),
+          ///image to be added here aswell under asset image
+          // decoration: BoxDecoration(
+          //     image: DecorationImage(fit: BoxFit.cover,
+          //         image: AssetImage(
+          //           '',
+          //         )
+          //     )
+          // ),
         )
       ],
     );
@@ -253,10 +212,9 @@ class Login extends ConsumerWidget {
   Widget build(BuildContext context, ScopedReader watch) {
     var email =watch(emailProvider).state;
     var password =watch(passwordProvider).state;
-    var _auth = watch(authServiesProvider);
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xffFAF3F3),
+          backgroundColor: const Color(0xffFAF3F3),
           resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Column(
