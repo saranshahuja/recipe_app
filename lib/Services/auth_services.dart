@@ -7,13 +7,13 @@ class AuthenticationServices{
   AuthenticationServices(this._firebaseAuth);
 
 
-  Stream<User>? get authStatechange => _firebaseAuth.authStateChanges();
+  Stream<User?> get authStatechange => _firebaseAuth.authStateChanges();
 
   Future<String> getCurrentUserID() async {
-    return (await _firebaseAuth.currentUser).uid;
+    return (await _firebaseAuth.currentUser)!.uid;
   }
 
-  Future<String> SignIn(String email, String password) async {
+  Future<String?> SignIn(String email, String password) async {
     try {
       await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
@@ -24,19 +24,19 @@ class AuthenticationServices{
       return e.message;
     }
   }
-  User getcurrentUser(){
+  User? getcurrentUser(){
     return _firebaseAuth.currentUser;
   }
 
-  Future<String> signUp(String email, String password) async {
+  Future<String?> signUp(String email, String password) async {
     try {
       await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,
         password: password,
       ).then((value){
-        FirebaseFirestore.instance.collection('User data').doc(value.user.uid).set(
-            {"Email" : value.user.email,
-              'Uid' : value.user.uid,
+        FirebaseFirestore.instance.collection('User data').doc(value.user!.uid).set(
+            {"Email" : value.user!.email,
+              'Uid' : value.user!.uid,
             }
         );
       });

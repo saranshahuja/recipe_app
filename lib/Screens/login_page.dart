@@ -1,15 +1,10 @@
-import 'package:flutter/material.dart';
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:recipe_app/Providers/authProvider.dart';
-import 'package:recipe_app/Providers/loginProvider.dart';
+import 'package:recipe_app/Providers/auth_provider.dart';
+import 'package:recipe_app/Providers/login_provider.dart';
 import 'package:recipe_app/Screens/signup.dart';
 import 'package:sizer/sizer.dart';
-
-
 
 
 
@@ -113,7 +108,15 @@ class Login extends ConsumerWidget {
                       end: Alignment(0,-1),
                       begin: Alignment(0,1),
                       colors: [Color(0xff014283), Color(0xff0080ff) ]
+                  ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 4,
+                    blurRadius: 10,
+                    offset: Offset(0, 3),
                   )
+                ]
               ),
               child: ElevatedButton(
                 onPressed: ()=> _auth.SignIn(email, password),
@@ -253,7 +256,7 @@ class Login extends ConsumerWidget {
     var _auth = watch(authServiesProvider);
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Color(0xff191919),
+          backgroundColor: Color(0xffFAF3F3),
           resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Column(
