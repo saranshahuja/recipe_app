@@ -21,25 +21,30 @@ class Login extends ConsumerWidget {
   Widget _buildLogo(){
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 5.h),
-      child: Container(
-        width: 80.w,
-        height: 14.7.h,
+      child: Expanded(
+
         child: Column(
           children: [
-            ///Image to be added here
-            // Image(
-            //   fit: BoxFit.fitHeight,
-            //   image: AssetImage(
-            //     ,
-            //   ),
-            // ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(45.sp),
+              child: Image(
+                width: 80.w,
+                height: 27.4.h,
+                image: AssetImage(
+                  'assets/pasta.jpg',
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
             FittedBox(
               fit: BoxFit.fitWidth,
               child: Text('Bits and Bytes ',
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 45.sp,
+                  fontSize: 32.sp,
                 ),
               ),
             )
@@ -52,6 +57,7 @@ class Login extends ConsumerWidget {
     return Padding(
       padding: EdgeInsets.all(5),
       child: TextFormField(
+
         keyboardType: TextInputType.emailAddress,
         onChanged: (value)=> updateEmail(context, value),
         decoration: InputDecoration(
@@ -88,30 +94,31 @@ class Login extends ConsumerWidget {
         Padding(
           padding: const EdgeInsets.only(top: 15),
           child: Container(
+
               height: 8.63.h,
-              width: 40.6.w,
+              width: 46.6.w,
               decoration: BoxDecoration(
 
-                 color: const Color(0xffBADEFF),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(18.0),
-                  ),
-                  // boxShadow: [
-                  //   BoxShadow(
-                  //     color: Colors.black.withOpacity(0.2),
-                  //     spreadRadius: 4,
-                  //     blurRadius: 20,
-                  //     offset: Offset(0, 3),
-                  //   )
-                  // ]
+                 color: Color(0xffBADEFF),
+                  borderRadius: BorderRadius.all(Radius.circular(18.0),),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: Offset(1, 5),
+                    )
+                  ]
               ),
 
               child: ElevatedButton(
-
                 onPressed: ()=> _auth.SignIn(email, password),
-                style: ElevatedButton.styleFrom(primary: Colors.transparent),
+                style: ElevatedButton.styleFrom(primary: Color(0xffBADEFF)),
                 child: Text(
                   'Login', style: TextStyle(
+                  fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Rowdies',
                     color: Colors.black
                 ),
                 ),
@@ -131,10 +138,10 @@ class Login extends ConsumerWidget {
         ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(5)),
           child: Container(
-            height: 54.h,
+            height: 44.h,
             width: 90.w,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 _buildEmailRow(context  , watch ),
@@ -186,27 +193,7 @@ class Login extends ConsumerWidget {
   }
 
 
-///another image to be added here
-  Widget _buildCLogo(){
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Container(
-          height: 14.2.h,
-          width: 51.2.w,
-          ///image to be added here aswell under asset image
-          // decoration: BoxDecoration(
-          //     image: DecorationImage(fit: BoxFit.cover,
-          //         image: AssetImage(
-          //           '',
-          //         )
-          //     )
-          // ),
-        )
-      ],
-    );
-  }
+
 
   @override
   Widget build(BuildContext context, ScopedReader watch) {
@@ -218,12 +205,11 @@ class Login extends ConsumerWidget {
           resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 _buildLogo(),
                 _buildContainer(context  , watch, email , password),
                 _buildSignup(context),
-                _buildCLogo(),
               ],
             ),
           )
