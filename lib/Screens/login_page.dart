@@ -164,7 +164,7 @@ class Login extends ConsumerWidget {
           onPressed: (){
             Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => signup())
+                MaterialPageRoute(builder: (context) => Signup())
             );
           },
           child: RichText(
@@ -205,7 +205,7 @@ class Login extends ConsumerWidget {
           resizeToAvoidBottomInset: false,
           body: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 _buildLogo(),
                 _buildContainer(context  , watch, email , password),
