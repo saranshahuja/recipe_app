@@ -2,26 +2,27 @@ import 'package:flutter/material.dart';
 
 class RecipeSearchDelegate extends SearchDelegate {
   @override
-  List<Widget>? buildActions(BuildContext context) {
-    // TODO: implement buildActions
-    throw UnimplementedError();
+  List<Widget> buildActions(BuildContext context) {
+    return [
+      Text('Hi Actions')
+    ];
   }
 
   @override
-  Widget? buildLeading(BuildContext context) {
-    // TODO: implement buildLeading
-    throw UnimplementedError();
+  Widget buildLeading(BuildContext context) {
+    return
+      Text('Hi Leading');
   }
 
   @override
   Widget buildResults(BuildContext context) {
-    // TODO: implement buildResults
-    throw UnimplementedError();
+    return
+      Text('Hi Results');
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implement buildSuggestions
-    throw UnimplementedError();
+    return
+      Text('Hi Suggestions');
   }
 }
