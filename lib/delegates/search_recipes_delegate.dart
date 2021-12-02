@@ -4,14 +4,23 @@ class RecipeSearchDelegate extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
-      Text('Hi Actions')
+    IconButton(
+        onPressed: () {
+          this.query = '';
+        }
+        ,icon: Icon(Icons.clear)
+    )
     ];
   }
 
   @override
   Widget buildLeading(BuildContext context) {
-    return
-      Text('Hi Leading');
+    return IconButton(
+        onPressed: () {
+          this.close(context, null);
+        }
+        ,icon: Icon(Icons.arrow_back_ios)
+    );
   }
 
   @override
