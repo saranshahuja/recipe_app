@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Styles/styles.dart';
 
 class RecipeSearchDelegate extends SearchDelegate {
   @override
@@ -31,7 +32,12 @@ class RecipeSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return
-      Text('Hi Suggestions');
+   return Container(
+     padding: EdgeInsets.all(10.0),
+     child: Text(
+       'Your Favourite Recipe...'
+
+     )
+   );
   }
 }
