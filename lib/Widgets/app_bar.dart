@@ -6,7 +6,7 @@ Widget appBar( BuildContext context, GlobalKey<ScaffoldState> key ) {
     floating: false,
     leading: GestureDetector(
       onTap:() {
-        key.currentState.openDrawer();
+        print('HI');
       },
       child: Container(
         padding: EdgeInsets.all(15.0),
@@ -19,7 +19,7 @@ Widget appBar( BuildContext context, GlobalKey<ScaffoldState> key ) {
     ),
     actions: <Widget>[
       Container(
-        padding: EdgeInserts.all(15.0),
+        padding: EdgeInsets.all(15.0),
         child:Icon(
           Icons.search,
           color: Color.fromRGBO(183, 195, 206, 1.0),
