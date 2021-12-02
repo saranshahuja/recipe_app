@@ -8,4 +8,4 @@ final titlesStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: colorTitle,
   fontSize: 24.0
-)
+);

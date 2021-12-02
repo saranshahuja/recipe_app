@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipe_app/Screens/home_Screen.dart';
 import 'package:sizer/sizer.dart';
 import 'package:recipe_app/Providers/auth_provider.dart';
-import 'package:recipe_app/Providers/login_provider.dart';
 import 'package:recipe_app/Providers/signup_providers.dart';
 
 
@@ -152,7 +151,7 @@ class Signup extends ConsumerWidget {
                 },
                 style: ElevatedButton.styleFrom(primary: Color(0xffbadeff)),
                 child: Text(
-                    'Continue', style:TextStyle(
+                    'Sign Up', style:TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Rowdies',

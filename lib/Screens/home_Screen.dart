@@ -13,35 +13,35 @@ import 'package:recipe_app/Widgets/titles.dart';
 import 'package:recipe_app/Widgets/swiper_categories.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: menuLateral(context),
         key: _scaffoldKey,
         backgroundColor: colorBG,
-        body:CustomScrollView(
+        body: CustomScrollView(
           slivers: <Widget>[
-            appBar( context, _scaffoldKey ),
+            appBar(context, _scaffoldKey),
             SliverList(
               delegate: SliverChildListDelegate(
-                    [
-                      Column(
+                  [
+                    Column(
                         children: <Widget>[
                           swiperPopular(),
                           titles('Categories'),
                           swiperCategories(),
                           titles('Popular Recipes')
                         ]
-                      )
-                    ]
-                ),
+                    )
+                  ]
+              ),
             )
           ],
         )
     );
+  }
 }
 
-// class _HomeScreenState extends State<HomeScreen> {
-//
-//   }
-// }

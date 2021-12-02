@@ -11,11 +11,7 @@ Widget appBar(BuildContext context, GlobalKey<ScaffoldState> key) {
       },
       child: Container(
         padding: EdgeInsets.all(15.0),
-        child: Image(
-          image: AssetImage('assets/menu.png'),
-          width: 10.0,
-          height: 10.0,
-        ),
+        child: Icon(Icons.menu,color: Colors.black,),
       ),
     ),
     actions: <Widget>[
