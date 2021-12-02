@@ -35,7 +35,8 @@ class RecipeSearchDelegate extends SearchDelegate {
    return Container(
      padding: EdgeInsets.all(10.0),
      child: Text(
-       'Your Favourite Recipe...'
+       'Your Favourite Recipe...',
+
 
      )
    );
