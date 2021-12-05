@@ -1,24 +1,52 @@
 // ignore_for_file: file_names
-
+//Materials
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Providers/recipes_provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+//Styles
+import 'package:recipe_app/Styles/styles.dart';
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+//Widgets
+import 'package:recipe_app/Widgets/app_bar.dart';
+import 'package:recipe_app/Widgets/menu_lateral.dart';
+import 'package:recipe_app/Widgets/swiper_popular.dart';
+import 'package:recipe_app/Widgets/titles.dart';
+import 'package:recipe_app/Widgets/swiper_categories.dart';
 
-class _HomeScreenState extends State<HomeScreen> {
+class HomeScreen extends StatelessWidget {
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
+
+    RecipeProvider.loadPopularRecipes();
+
+
     return Scaffold(
-      appBar: AppBar(title: Text("Bits and Bites"),),
-      body: Column(
-        children: <Widget>[
-          Text("Coding to be done here"),
-        ],
-      ),
+        drawer: menuLateral(context),
+        key: _scaffoldKey,
+        backgroundColor: colorBG,
+        body: CustomScrollView(
+          slivers: <Widget>[
+            appBar(context, _scaffoldKey),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                  [
+                    Column(
+                        children: <Widget>[
+                          swiperPopular(),
+                          titles('Categories'),
+                          swiperCategories(),
+                          titles('Popular Recipes')
+                        ]
+                    )
+                  ]
+              ),
+            )
+          ],
+        )
     );
   }
 }
+
