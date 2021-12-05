@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 //Materials
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Providers/recipes_provider.dart';
 
 //Styles
 import 'package:recipe_app/Styles/styles.dart';
@@ -18,6 +19,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    RecipeProvider.loadPopularRecipes();
+
+
     return Scaffold(
         drawer: menuLateral(context),
         key: _scaffoldKey,
