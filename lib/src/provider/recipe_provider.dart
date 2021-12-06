@@ -4,13 +4,21 @@ import 'package:flutter/services.dart' show rootBundle;
 
 class _RecipeProvider {
   List<dynamic> recipePopular = [];
+  List<dynamic> category = [];
   
-  Future<List<dynamic>> cargarRecetasPopulares) async {
-    final resp = await rootBundle.loadString('data/recetas.json');
-    Map<String, dynamic> recipeMap = json. decode (resp);
-    recipePopular = recipeMap'recipePopular'];
+  Future<List<dynamic>> carryRecipePopular() async {
+    final resp = await rootBundle.loadString('data/recipe.json');
+    Map<String, dynamic> recipeMap = json.decode(resp);
+    recipePopular = recipeMap['recipePopular'];
     
     return recipePopular;
+  }
+  
+  Future<List<dynamic>> carryCategory() async {
+    final resp = await rootBundle.loadString('data/recipe.json');
+    Map<String, dynamic> categoryMap = json.decode(resp);
+    category = categoryMap['category'];
+    return category;
   }
 
 }
