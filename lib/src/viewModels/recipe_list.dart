@@ -24,12 +24,15 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
         onTap: () {
           Navigator.pushedNamed( context, 'detail'); 
         },
-        child: Image(
+        child: ClipRRect(
+          borerRadius: BorderRadius.circular(10.0),
+          child: Image(
           image: NetworkImage(recipe['photo']),
           fit: BoxFit.fill,
-          width: 380.0,
+          width: 350.0,
           height: 140.0,
         ), //Image
+       ),
       ), //GestureDetector
       Container(
         alignment: AlignmentDirectional.topStart,
