@@ -83,18 +83,8 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
                                         fontWeight: FontWeight.bold,
                                         color: colorTitle,
                                         fontSize: 14.0
-                                    ))
-                            ):
+                                    )
+                            );
                           ])
                   ),
-
-
-
-
-
-                ]
-              ),
-            )
-          ]
-        )
-      )
+                            }                
