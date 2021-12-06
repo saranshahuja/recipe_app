@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recetas_app/src/styles/styles.dart';
+import 'package:recipe_app/Styles/styles.dart';
 
 Widget appBarCategoria(String title) {
   return SliverAppBar(
