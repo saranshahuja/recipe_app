@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget textoRecipe() {
+Widget textRecipe() {
   return Container(
     height: 20,
   );
@@ -23,7 +23,7 @@ Widget RecipeList() {
           height: 140.0,
         ),
       ),
-      textoRecipe()
+      textRecipe()
     ],
   );
 }
