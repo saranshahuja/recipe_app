@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 //Style
-import 'package: recipe_app/styles/styles.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
 //Widgets
-import 'package:recipe_app/Widgets/app_bar.dart';
+import 'package:recipe_app/Widgets/app_bar_detail.dart';
 import 'package:recipe_app/Widgets/titles.dart';
 import 'package:recipe_app/widgets/swiper_ingredients.dart';
 import 'package:recipe_app/widgets/titles.dart';
@@ -20,7 +19,7 @@ class DetailPage extends StatelessWidget {
       backgroundColor: colorBG,
       body: CustomScrollView(
           slivers: <Widget>[
-            appBarDetail('Pizza')
+            appBarDetail('Pizza'),
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
@@ -31,7 +30,7 @@ class DetailPage extends StatelessWidget {
                         //textRecipe(titleRecipeStyleDetail),
                       ), //Padding
 
-                      title('Ingredients', titlesStyle),
+                      titles('Ingredients', titlesStyle),
                       SizedBox(
                         height: 20.0,
                       ), //SizedBox
@@ -39,9 +38,10 @@ class DetailPage extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
-                      titles('Preparation', titleStyle),
+                      titles('Preparation'),
                       _textDescription(description)
-                    ])
+                    ]
+                )
             )
           ]
       ),

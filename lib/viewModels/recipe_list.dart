@@ -6,9 +6,9 @@ import 'package:recipe_app/Styles/styles.dart';
 List<Widget> recipeList(BuildContext context, List<dynamic> recipesPopular) {
   final List<Widget> listRecipe = [];
 
-  recipePopular.forEach((recipe) {
+  recipesPopular.forEach((recipe) {
     final listWidgetProvisional =
-        _bodyRecipeList(context, titlesRecipeStyle, recipe);
+        bodyRecipeList(context, titlesRecipeStyle, recipe);
     listRecipe.add(listWidgetProvisional);
   });
 

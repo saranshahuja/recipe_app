@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget textoRecipe() {}
+Widget textoRecipe() {
+  return Container(
+    height: 20,
+  );
+}
 
 Widget RecipeList() {
   return Column(
