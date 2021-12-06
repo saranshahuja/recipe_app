@@ -12,7 +12,7 @@ Drawer menuLateral( context ) {
           DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assests/recipe1.png'),
+                image: AssetImage('assests/loginpage_image.jpg'),
                 fit: BoxFit.cover
               ) //DecorationImage
             ), //BoxDecoration
