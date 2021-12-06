@@ -29,3 +29,4 @@ Widget Recipe(BuildContext context) {
       textoRecipe( titlesRecipeStyle )
       ], //<Widget>[]
     ); //Column
+} //Class
