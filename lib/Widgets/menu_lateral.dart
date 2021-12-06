@@ -17,7 +17,7 @@ Drawer menuLateral(context) {
                       fit: BoxFit.cover)),
               child: Container(
                 alignment: Alignment.center,
-                child: Text('RECIPE APP', style: styleTextMenuLateral),
+                child: Text('Bits and Bytes', style: styleTextMenuLateral),
               )),
           ListTile(
             leading: Icon(Icons.all_inclusive, color: colorIcons),

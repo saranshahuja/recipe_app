@@ -12,7 +12,7 @@ class CategoriesPage extends StatelessWidget {
       drawer: menuLateral(context),
       key: _scaffoldKey,
       backgroundColor: colorBG,
-      body: CustomScrollView(slivers: [appBar(context, key)]),
+      body: CustomScrollView(slivers: [appBar(context, _scaffoldKey)]),
     );
   }
 }

@@ -17,10 +17,10 @@ Widget sliderIngredients () {
         return PageView(
           controller: controller,
           children: [
-            _imagen(),
-            _imagen(),
-            _imagen(),
-            _imagen()
+            _image(),
+            _image(),
+            _image(),
+            _image()
           ]
         );
       }
@@ -28,7 +28,7 @@ Widget sliderIngredients () {
   );
 }
 
-Widget _imagen() {
+Widget _image() {
   return Center(
     child: Image(
       alignment: Alignment.topLeft,
