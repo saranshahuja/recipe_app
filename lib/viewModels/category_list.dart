@@ -25,7 +25,7 @@ Widget _imageCategory( BuildContext context, Map<String dynamic> category ) {
         Container(
           width: 130.0,
           height: 100.0,
-          margin: EdgeInsets.only(right: 10.0),
+          margin: EdgeInsets.only(right: 10.0, top: 10.0, bottom: 10.0),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
             child: Image(
