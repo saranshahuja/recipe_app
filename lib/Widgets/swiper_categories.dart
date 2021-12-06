@@ -18,9 +18,14 @@ class SwiperCategories  extends StatelessWidget {
             return FutureBuilder(
               future: recipeProvider.bodyCategory(),
               intialData: [],
-              builder: (BuildContext context, AsyncSnapshot snapshot) {
-                return; //Swiper
-              }; //Container
+              builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
+                return pageView( 
+                  controller: controller,
+                  children: <Widget>[
+                    
+                    ], //<Widget>[]  
+                ); //PageView
+              }; 
             );
           },
           itemCount: 3,
