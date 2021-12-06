@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
+//Swiper
 import 'package:flutter_swiper/flutter_swiper.dart';
+
+//Provider
+import 'package:recipe_app/src/provider/recipe_provider.dart';
+
+//View Model
+import 'package:recipe_app/src/viewModel/category_list.dart';
 
 class SwiperCategories  extends StatelessWidget {
 
@@ -21,7 +28,7 @@ class SwiperCategories  extends StatelessWidget {
               builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
                 return pageView( 
                   controller: controller,
-                  children: listCategory,  
+                  children: categoryList(context),  
                 ); //PageView
               }; 
             );
