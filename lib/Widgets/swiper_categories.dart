@@ -21,9 +21,7 @@ class SwiperCategories  extends StatelessWidget {
               builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
                 return pageView( 
                   controller: controller,
-                  children: <Widget>[
-                    
-                    ], //<Widget>[]  
+                  children: listCategory,  
                 ); //PageView
               }; 
             );
