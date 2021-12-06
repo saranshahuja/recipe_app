@@ -26,7 +26,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
           Navigator.pushedNamed( context, 'detail'); 
         },
         child: Image(
-          image: AssetImage('assets/pasta.jpg'),
+          image: NetworkImage(recipe['photo']),
           fit: BoxFit.fill,
           width: 380.0,
           height: 140.0,
@@ -39,7 +39,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              'Masala Marinated Tandoori Chicken',
+              recipe['photo'],
               textAlign: TextAlign.left,
               style: titleRecipeStyle,
             ),
