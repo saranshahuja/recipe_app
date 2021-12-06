@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
+//Style
+import 'package:recipe_app/src/styles/styles.dart';
+
 List<Widget> recipeList( BuildContext context, List<dynamic> recipesPopular ) {
   final List<Widget> listRecipe = [];
   
   recipePopular.forEach(( recipe ){
-    final listWidgetProv = _bodyRecipeList( context, titlesRecipeStyle, recipe );
+    final listWidgetProvisional = _bodyRecipeList( context, titlesRecipeStyle, recipe );
+    listRecipe.add(listWidgetProvisional);
   });
+  
+  return listRecipe;
  
 }
 
