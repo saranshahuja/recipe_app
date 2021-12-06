@@ -11,8 +11,7 @@ List<Widget> recipeList( BuildContext context, List<dynamic> recipesPopular ) {
     listRecipe.add(listWidgetProvisional);
   });
   
-  return listRecipe;
- 
+  return listRecipe; 
 }
 
 Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,dymanic> recipe){
@@ -26,7 +25,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
           Navigator.pushedNamed( context, 'detail'); 
         },
         child: Image(
-          image: NetworkImage(recipe['photo']),
+          image: NetworkImage(recipe['photoMasalaMarinatedTandooriChicken']),
           fit: BoxFit.fill,
           width: 380.0,
           height: 140.0,
@@ -39,11 +38,11 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              recipe['photo'],
+              recipe['Title'],
               textAlign: TextAlign.left,
               style: titleRecipeStyle,
-            ),
-            Text('Tandoori chiken is always great on the charcoal grill and does not need much help, but I love how this came out...'
+            ), //Text
+            Text(recipe[ 'description' ],
             textAlign: TextAlign.left,
               style:descriptionRecipeStyle,
             ),
@@ -61,7 +60,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
 
                           Container(
                             margin: EdgeInsets.only(left:5.0),
-                            child: Text('45 min',
+                            child: Text(recipe['duration'],
                             style: TextStyle(
                               fontFamily: 'Avenir',
                               fontWeight: FontWeight.bold,
@@ -78,7 +77,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
                             Icon( Icons.fastfood, color: colorIcons),
 
                             container(
-                                child: Text('Medium',
+                                child: Text(recipe['difficulty'],
                                     style: TextStyle(
                                         fontFamily: 'Avenir',
                                         fontWeight: FontWeight.bold,
