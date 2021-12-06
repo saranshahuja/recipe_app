@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
-Widget appBarCategoria(String title) {
+Widget appBarCategories(String title) {
   return SliverAppBar(
       backgroundColor: colorBG,
       floating: false,
