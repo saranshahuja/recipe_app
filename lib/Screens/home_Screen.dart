@@ -30,14 +30,14 @@ class HomeScreen extends StatelessWidget {
                 Column(children: <Widget>[
                   swiperPopular(),
                   titles('Categories'),
-                  swiperCategories(),
+                  // swiperCategories(),
                   titles('Popular Recipes'),
-                  RecipeList(),
-                  RecipeList(),
-                  RecipeList(),
-                  RecipeList(),
-                  RecipeList(),
-                  RecipeList()
+                  // RecipeList(),
+                  // RecipeList(),
+                  // RecipeList(),
+                  // RecipeList(),
+                  // RecipeList(),
+                  // RecipeList()
                 ])
               ]),
             )

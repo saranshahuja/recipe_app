@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Styles/styles.dart';
 
 
 Drawer menuLateral( context ) {
@@ -17,9 +18,9 @@ Drawer menuLateral( context ) {
               ) //DecorationImage
             ), //BoxDecoration
           
-            child: Conainer(
+            child: Container(
               alignment: Alignment.center,
-              child: Text('RECIPE APP', style: styleTextoMenuLateral),
+              child: Text('RECIPE APP', /*style: styleTextoMenuLateral*/),
               ) //Container
             ), //DrawerHeader
           
@@ -29,7 +30,7 @@ Drawer menuLateral( context ) {
             onTap: () {
               Navigator.pushNamed(context, 'categories');
             } 
-          ) //ListTile
+          ) ,//ListTile
           
           ListTile(
             leading: Icon(Icons.help, color: colorIcons),
@@ -44,3 +45,5 @@ Drawer menuLateral( context ) {
       ), //Container
     ); //Drawer
 }
+
+
