@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-class swiperCategories  extends StatelessWidget {
+class SwiperCategories  extends StatelessWidget {
 
   final controller = PageController(
     initialPage: 1,
