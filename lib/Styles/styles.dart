@@ -26,7 +26,7 @@ final titlesRecipeStyle = TextStyle(
     color: colorTitle,
     fontSize: 18.0);
 
-final titlesRecipeStyleDetalle = TextStyle(
+final titlesRecipeStyleDetail = TextStyle(
     fontFamily: 'PlayfairDisplay-Bold',
     fontWeight: FontWeight.bold,
     color: colorTitle,

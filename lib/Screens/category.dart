@@ -19,7 +19,7 @@ class DetailPage extends StatelessWidget {
       backgroundColor: colorBG,
       body: CustomScrollView(
           slivers: <Widget>[
-            appBarDetail('Pizza')
+            appBarDetail('Pizza'),
             SliverList(
                 delegate: SliverChildListDelegate(
                     [
@@ -30,7 +30,7 @@ class DetailPage extends StatelessWidget {
                         //textRecipe(titleRecipeStyleDetail),
                       ), //Padding
 
-                      title('Ingredients', titlesStyle),
+                      titles('Ingredients', titlesStyle),
                       SizedBox(
                         height: 20.0,
                       ), //SizedBox
@@ -38,7 +38,7 @@ class DetailPage extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
-                      titles('Preparation', titleStyle),
+                      titles('Preparation'),
                       _textDescription(description)
                     ]
                 )
