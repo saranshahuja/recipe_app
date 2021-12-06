@@ -1,9 +1,20 @@
 {
   "popularRecipes": [
     {
-      //Masala tandoori chicken photo
-      "photoMasalaTandooriChicken": https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Ftandoori-chicken&psig=AOvVaw2JJ8ydlwz3Y8KnT5cIFUry&ust=1638849525668000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNDd9LmkzvQCFQAAAAAdAAAAABAD
+      "Title": "Masala Marinated Tandoori Chicken",
+      //Masala Marinated Tandoori Chicken photo
+      "photo": https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Ftandoori-chicken&psig=AOvVaw2JJ8ydlwz3Y8KnT5cIFUry&ust=1638849525668000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNDd9LmkzvQCFQAAAAAdAAAAABAD
+      
+      "description"
+      "category"
+      "duration"
+      "difficulty"
+      "preparation"
+      "ingredients"
+
     
+      
+      
     }
     
 
