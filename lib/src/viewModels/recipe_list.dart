@@ -45,10 +45,10 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
             Text(recipe[ 'description' ],
             textAlign: TextAlign.left,
               style:descriptionRecipeStyle,
-            ),
+            ), //Text
             SizedBox(
               height: 10.0,
-            ),
+            ), //SizedBOX
             Container(
               child: Row(
                 children: <Widget>[
@@ -66,10 +66,13 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
                               fontWeight: FontWeight.bold,
                               color: colorTitle,
                               fontSize: 14.0
-                            ))
-                          )
-                        ])
-                  ),
+                            ), //TextStyle
+                           ), //Text             
+                          ) //Container
+                        ], //<Widget>[]
+                    ) //Row
+                  ), //Expanded
+
                   Expanded(
                       flex: 2,
                       child: Row(
@@ -82,9 +85,10 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
                                         fontFamily: 'Avenir',
                                         fontWeight: FontWeight.bold,
                                         color: colorTitle,
-                                        fontSize: 14.0
-                                    )
-                            );
-                          ])
-                  ),
-                            }                
+                                ), //TextStyle
+                           ), //Text             
+                          ) //Container
+                        ], //<Widget>[]
+                    ) //Row
+                  ), //Expanded
+                }   
