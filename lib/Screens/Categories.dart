@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/src/Styles/styles.dart';
-import 'package:recipe_app/src/Widgets/app_bar.dart';
-import 'package:recipe_app/src/Widgets/menu_lateral.dart';
+import 'package:recipe_app/Styles/styles.dart';
+import 'package:recipe_app/Widgets/app_bar.dart';
+import 'package:recipe_app/Widgets/menu_lateral.dart';
 
 class CategoriesPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
@@ -12,7 +12,7 @@ class CategoriesPage extends StatelessWidget {
       drawer: menuLateral(context),
       key: _scaffoldKey,
       backgroundColor: colorBG,
-      body: CustomScrollView(slivers: <Widgets>[appBar(context, key)]),
+      body: CustomScrollView(slivers: [appBar(context, key)]),
     );
   }
 }

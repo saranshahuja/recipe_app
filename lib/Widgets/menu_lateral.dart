@@ -20,21 +20,21 @@ Drawer menuLateral(context) {
                 child: Text('RECIPE APP', style: styleTextMenuLateral),
               )),
           ListTile(
-            leading: Icon(Icons.all_inclusive, color: colorIconos),
+            leading: Icon(Icons.all_inclusive, color: colorIcons),
             title: Text('All Recipes'),
             onTap: () {
               print('Continue browsing');
             },
           ),
           ListTile(
-            leading: Icon(Icons.fastfood, color: colorIconos),
+            leading: Icon(Icons.fastfood, color: colorIcons),
             title: Text('Categories'),
             onTap: () {
               print('Continue browsing');
             },
           ),
           ListTile(
-            leading: Icon(Icons.help, color: colorIconos),
+            leading: Icon(Icons.help, color: colorIcons),
             title: Text('Help'),
             onTap: () {
               print('Continue browsing');

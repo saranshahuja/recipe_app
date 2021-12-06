@@ -40,7 +40,8 @@ Widget textorecipe(){
                               fontWeight: FontWeight.bold,
                               color: colorTitle,
                               fontSize: 14.0
-                            ))
+                            )
+                            )
                           )
                         ])
                   ),
@@ -50,7 +51,7 @@ Widget textorecipe(){
                           children: <Widget>[
                             Icon( Icons.fastfood, color: colorIcons),
 
-                            container(
+                            Container(
                                 child: Text('Medium',
                                     style: TextStyle(
                                         fontFamily: 'Avenir',
@@ -58,7 +59,7 @@ Widget textorecipe(){
                                         color: colorTitle,
                                         fontSize: 14.0
                                     ))
-                            ):
+                            )
                           ])
                   ),
 
@@ -74,5 +75,5 @@ Widget textorecipe(){
       )
 
     ],
-  )
+  );
 }

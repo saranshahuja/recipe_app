@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 //Style
-import 'package: recipe_app/styles/styles.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
 //Widgets
-import 'package:recipe_app/Widgets/app_bar.dart';
+import 'package:recipe_app/Widgets/app_bar_detail.dart';
 import 'package:recipe_app/Widgets/titles.dart';
 import 'package:recipe_app/widgets/swiper_ingredients.dart';
 import 'package:recipe_app/widgets/titles.dart';
@@ -41,7 +40,8 @@ class DetailPage extends StatelessWidget {
                       ),
                       titles('Preparation', titleStyle),
                       _textDescription(description)
-                    ])
+                    ]
+                )
             )
           ]
       ),
