@@ -15,13 +15,12 @@ class SwiperCategories  extends StatelessWidget {
       height: 110.0,
       child: Swiper(
           itemBuilder: ( BuildContext context, int index ) {
-            return PageView(
-              children: <Widget>[
-                _imageCategory(),
-                _imageCategory(),
-                _imageCategory(),
-                _imageCategory()
-              ]
+            return FutureBuilder(
+              future: recipeProvider.bodyCategory(),
+              intialData: [],
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                return; //Swiper
+              }; //Container
             );
           },
           itemCount: 3,
