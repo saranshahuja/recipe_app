@@ -25,7 +25,7 @@ Widget bodyRecipeList( BuildContext context, TextStyle RecipeStyle, Map<String,d
           Navigator.pushedNamed( context, 'detail'); 
         },
         child: Image(
-          image: NetworkImage(recipe['photoMasalaMarinatedTandooriChicken']),
+          image: NetworkImage(recipe['photo']),
           fit: BoxFit.fill,
           width: 380.0,
           height: 140.0,
