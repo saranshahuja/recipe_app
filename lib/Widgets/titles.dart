@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
-Widget titles( String text) {
+Widget titles( String text, TextStyle titlesStyleCategories) {
   return Container(
     alignment: AlignmentDirectional.topStart,
     margin: EdgeInsets.only(left:30.0),

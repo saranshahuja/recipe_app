@@ -18,7 +18,12 @@
 
   ],
 
-  "categories":[
+  "categories": [
+    {
+      "name" : "Snacks",
+      "photo" : " "
+    }
+
 
   ],
 
