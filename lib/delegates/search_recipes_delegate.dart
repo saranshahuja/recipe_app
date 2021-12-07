@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Styles/styles.dart';
 import 'package:recipe_app/Providers/recipes_provider.dart';
+import 'package:recipe_app/viewModels/recipes_wanted_view_model.dart';
 
 class RecipeSearchDelegate extends SearchDelegate {
+
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    return theme.copyWith(
+      primaryColor: theme.primaryColorLight,
+
+    );
+  }
+
+
+
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
@@ -30,10 +43,22 @@ class RecipeSearchDelegate extends SearchDelegate {
     return FutureBuilder(
         future: RecipeProvider.loadPopularRecipes(),
         initialData: [],
-        builder: (BuildContext context, AsyncSnapshot snapshot){
-          return;
-        },
+        builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot){
+          List? recipes = snapshot.data;
+          var recipeWanted = this.query.toLowerCase();
 
+          return CustomScrollView(
+            slivers: [
+  SliverList(delegate: SliverChildListDelegate(
+    [
+      Column(
+        children: recipeListWanted(context, recipes, recipeWanted),
+      )
+    ]
+  ))
+            ],
+          );
+        },
     );
   }
 
