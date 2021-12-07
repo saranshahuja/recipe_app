@@ -1,18 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/Styles/styles.dart';
-import 'package:recipe_app/Widgets/app_bar.dart';
-import 'package:recipe_app/Widgets/menu_lateral.dart';
 
-class CategoriesPage extends StatelessWidget {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+import 'package:recipe_app/Providers/recipes_provider.dart';
+
+
+import 'package:recipe_app/Styles/styles.dart';
+
+
+import 'package:recipe_app/viewModels/recipe_list.dart;
+
+
+import 'package:recipe_app/Widgets/app_bar_categories.dart';
+
+import 'package:recipe_app/Widgets/titles.dart'
+
+class CategoriaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Map<String,dynamic> categoria =  ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
-      drawer: menuLateral(context),
-      key: _scaffoldKey,
       backgroundColor: colorBG,
-      body: CustomScrollView(slivers: [appBar(context, _scaffoldKey)]),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          appBarCategories( 'Pizza' ),
+          SliverList(
+              delegate: SliverChildListDelegate([
+                titles( category['nombre'], titlesStyleCategories ),
+                //swiperPopulares(),
+                FutureBuilder(
+                    future: recipeProvider.cargarRecetaCategorias( categoria['nombre']),
+                    initialData: [],
+                    builder: ( BuildContext context, AsyncSnapshot snapshot ) {
+                      return Column(
+                          children: recipeList( context, snapshot.data )
+                      );
+                    }
+                )
+              ]))
+        ],
+      ),
     );
   }
-}
+
+}//Clase
