@@ -10,7 +10,15 @@ class RecipeSearchDelegate extends SearchDelegate {
     final ThemeData theme = Theme.of(context);
     return theme.copyWith(
       primaryColor: theme.primaryColorLight,
-
+      primaryIconTheme: theme.primaryIconTheme,
+      primaryColorBrightness: theme.primaryColorBrightness,
+      primaryTextTheme: theme.primaryTextTheme,
+      textTheme: theme.primaryTextTheme,
+      inputDecorationTheme: theme.inputDecorationTheme.copyWith(
+        hintStyle: TextStyle(
+          color: Colors.white60
+        )
+      )
     );
   }
 
@@ -44,7 +52,7 @@ class RecipeSearchDelegate extends SearchDelegate {
         future: RecipeProvider.loadPopularRecipes(),
         initialData: [],
         builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot){
-          List? recipes = snapshot.data;
+          List<dynamic>? recipes = snapshot.data;
           var recipeWanted = this.query.toLowerCase();
 
           return CustomScrollView(
@@ -52,7 +60,7 @@ class RecipeSearchDelegate extends SearchDelegate {
   SliverList(delegate: SliverChildListDelegate(
     [
       Column(
-        children: recipeListWanted(context, recipes, recipeWanted),
+        children: recipeListWanted(context, recipes!, recipeWanted),
       )
     ]
   ))
