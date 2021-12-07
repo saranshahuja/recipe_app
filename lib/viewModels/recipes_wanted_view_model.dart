@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+
 import 'package:recipe_app/Styles/styles.dart';
 
 //Style
 
-List<Widget> recipeList(BuildContext context, List<dynamic> recipesPopular) {
+List<Widget> recipeListWanted(BuildContext context, List<dynamic> recipes, String recipeWanted) {
   final List<Widget> listRecipe = [];
 
-  recipesPopular.forEach((recipe) {
-    final listWidgetProvisional =
-        bodyRecipeList(context, titlesRecipeStyle, recipe);
-    listRecipe.add(listWidgetProvisional);
+  recipes.forEach((recipe) {
+    var title = recipe['title'].toString().toLowerCase();
+    if(title.contains(recipeWanted)){
+      final listWidgetProvisional = _bodyRecipeList(context, titlesRecipeStyle, recipe);
+      listRecipe.add(listWidgetProvisional);
+    }
   });
 
   return listRecipe;
 }
 
-Widget bodyRecipeList(
+Widget _bodyRecipeList(
     BuildContext context, TextStyle RecipeStyle, Map<String, dynamic> recipe) {
   return Column(children: <Widget>[
     SizedBox(
@@ -76,7 +79,7 @@ Widget bodyRecipeList(
                         ) //Container
                       ], //<Widget>[]
                     ) //Row
-                    ), //Expanded
+                ), //Expanded
 
                 Expanded(
                     flex: 2,
@@ -96,7 +99,7 @@ Widget bodyRecipeList(
                         ) //Container
                       ], //<Widget>[]
                     ) //Row
-                    ),
+                ),
               ],
             ),
           )

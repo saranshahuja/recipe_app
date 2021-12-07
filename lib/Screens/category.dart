@@ -1,53 +1,54 @@
 import 'package:flutter/material.dart';
 
 //Style
-import 'package: recipe_app/styles/styles.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
 //Widgets
-import 'package:recipe_app/Widgets/app_bar.dart';
-import 'package:recipe_app/Widgets/titles.dart';
-import 'package:recipe_app/widgets/swiper_ingredients.dart';
-import 'package:recipe_app/widgets/titles.dart';
+import 'package:recipe_app/Widgets/app_bar_detail.dart';
+import 'package:recipe_app/Widgets/swiper_ingredients.dart';
+
 
 class DetailPage extends StatelessWidget {
-  final String description =
-      'Place the shrimp in the work bowl...';
+  final String description = 'Place the shrimp in the work bowl...';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorBG,
-      body: CustomScrollView(
-          slivers: <Widget>[
-            appBarDetail('Pizza')
-            SliverList(
-                delegate: SliverChildListDelegate(
-                    [
-                      Padding(
-                          padding: const EdgeInsets.only(
-                              right: 8.0, bottom: 8.0),
-                          child: Text('Hello')
-                        //textRecipe(titleRecipeStyleDetail),
-                      ), //Padding
+      body: CustomScrollView(slivers: <Widget>[
+        appBarDetail('Pizza'),
+        SliverList(
+            delegate: SliverChildListDelegate([
+          Padding(
+              padding: const EdgeInsets.only(right: 8.0, bottom: 8.0),
+              child: Text('Hello')
+              //textRecipe(titleRecipeStyleDetail),
+              ),
 
-                      title('Ingredients', titlesStyle),
-                      SizedBox(
-                        height: 20.0,
-                      ), //SizedBox
-                      sliderIngredients(),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      titles('Preparation', titleStyle),
-                      _textDescription(description)
-                    ])
-            )
-          ]
-      ),
+          Container(
+              alignment: AlignmentDirectional.topStart,
+              margin: EdgeInsets.only(left: 30.0),
+              child: Text(
+                'Ingredients',
+                style: titlesStyle,
+              )),
+          SizedBox(
+            height: 20.0,
+          ),
+          sliderIngredients(),
+          SizedBox(
+            height: 15.0,
+          ),
+          Container(
+              alignment: AlignmentDirectional.topStart,
+              margin: EdgeInsets.only(left: 30.0),
+              child: Text(
+                'Preparation',
+                style: titlesStyle,
+              )),
+         // _textDescription(description)
+        ]))
+      ]),
     );
   }
-          
-              
-               
-                
+}

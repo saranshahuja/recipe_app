@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:recipe_app/Providers/recipes_provider.dart';
 //Styles
 import 'package:recipe_app/Styles/styles.dart';
+import 'package:recipe_app/Widgets/Recipe_List.dart';
 //Widgets
 import 'package:recipe_app/Widgets/app_bar.dart';
 import 'package:recipe_app/Widgets/menu_lateral.dart';
@@ -30,14 +31,14 @@ class HomeScreen extends StatelessWidget {
                 Column(children: <Widget>[
                   swiperPopular(),
                   titles('Categories'),
-                  // swiperCategories(),
+                  swiperCategories(),
                   titles('Popular Recipes'),
-                  // RecipeList(),
-                  // RecipeList(),
-                  // RecipeList(),
-                  // RecipeList(),
-                  // RecipeList(),
-                  // RecipeList()
+                  RecipeList(),
+                   RecipeList(),
+                   RecipeList(),
+                  RecipeList(),
+                  RecipeList(),
+                  RecipeList()
                 ])
               ]),
             )
