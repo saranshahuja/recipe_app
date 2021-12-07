@@ -18,7 +18,7 @@ List<Widget> categoryList( BuildContext context){
 Widget _imageCategory( BuildContext context, Map<String, dynamic> category ) {
   return GestureDetector(
     onTap: () {
-      Navigator.pushNamed(context, 'category');
+      Navigator.pushNamed(context, 'category', arguments: category);
     },
     child: Stack(
       children: [
