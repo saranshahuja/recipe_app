@@ -1,25 +1,55 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
 
 class _recipe_provider{
 List<dynamic> popularRecipes = [];
 List<dynamic> category =[];
+List<dynamic> recipeCategories = [];
+
+FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 
 Future<List<dynamic>> loadPopularRecipes() async {
-  final res = await rootBundle.loadString('data/recipes.json');
- Map<String, dynamic> recipeMap = json.decode(res);
- popularRecipes = recipeMap['Recipes'];
- return popularRecipes;
+  final List<dynamic> tempRecipeList = [];
+  await firestore.collection('Recipes').get().then((QuerySnapshot querySnapshot) => {
+    querySnapshot.docs.forEach((doc) {
+      Map<String, dynamic>? recipeMap = doc.data() as Map<String, dynamic>?;
+      tempRecipeList.add(recipeMap);
+    })
+  });
+  popularRecipes = tempRecipeList;
+  return popularRecipes;
+
 }
 
 Future<List<dynamic>> carryCategory() async {
-  final resp = await rootBundle.loadString('data/recipe.json');
-  Map<String, dynamic> categoryMap = json.decode(resp);
-  category = categoryMap['categories'];
+  final List<dynamic> tempCategoryList = [];
+  await firestore.collection('categories').get().then((QuerySnapshot querySnapshot) => {
+    querySnapshot.docs.forEach((doc) {
+      Map<String, dynamic>? categoriesMap = doc.data() as Map<String, dynamic>?;
+      tempCategoryList.add(categoriesMap);
+    })
+  });
+  category = tempCategoryList;
   return category;
-}
 
 }
+
+Future<List<dynamic>> carryRecipeCategories(String categories) async {
+  final List<dynamic> tempCategoryList = [];
+  await firestore.collection('categories').get().then((QuerySnapshot querySnapshot) => {
+    querySnapshot.docs.forEach((doc) {
+      Map<String, dynamic>? categoriesMap = doc.data() as Map<String, dynamic>?;
+      tempCategoryList.add(categoriesMap);
+    })
+  });
+  category = tempCategoryList;
+  return category;
+
+}
+}
+
+
 
 final RecipeProvider = _recipe_provider();
