@@ -76,8 +76,7 @@ class RecipeSearchDelegate extends SearchDelegate {
      padding: EdgeInsets.all(10.0),
      child: Text(
        'Your Favourite Recipe...',
-
-
+       style: descriptionRecipeStyle,
      )
    );
   }
