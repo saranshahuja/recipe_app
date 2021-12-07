@@ -10,8 +10,7 @@ List<Widget> recipeListWanted(BuildContext context, List<dynamic> recipes, Strin
   recipes.forEach((recipe) {
     var title = recipe['title'].toString().toLowerCase();
     if(title.contains(recipeWanted)){
-      final listWidgetProvisional =
-      _bodyRecipeList(context, titlesRecipeStyle, recipe);
+      final listWidgetProvisional = _bodyRecipeList(context, titlesRecipeStyle, recipe);
       listRecipe.add(listWidgetProvisional);
     }
   });
