@@ -46,7 +46,7 @@ class DetailPage extends StatelessWidget {
                 'Preparation',
                 style: titlesStyle,
               )),
-          textDescription(description)
+         // _textDescription(description)
         ]))
       ]),
     );
