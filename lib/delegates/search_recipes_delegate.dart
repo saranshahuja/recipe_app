@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Styles/styles.dart';
+import 'package:recipe_app/Providers/recipes_provider.dart';
 
 class RecipeSearchDelegate extends SearchDelegate {
   @override
@@ -26,8 +27,14 @@ class RecipeSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    return
-      Text('Hi Results');
+    return FutureBuilder(
+        future: RecipeProvider.loadPopularRecipes(),
+        initialData: [],
+        builder: (BuildContext context, AsyncSnapshot snapshot){
+          return;
+        },
+
+    );
   }
 
   @override
