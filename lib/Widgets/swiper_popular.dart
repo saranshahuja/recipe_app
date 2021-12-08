@@ -23,8 +23,8 @@ class swiperPopular extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(10.0),
       alignment: AlignmentDirectional.center,
-      child: const Image(
-        image: AssetImage('assets/images.jpg'),
+      child: Image(
+        image: AssetImage('assets/loginpage_image.jpg'),
         fit: BoxFit.fill,
       ),
     );

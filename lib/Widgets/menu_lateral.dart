@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Providers/auth_provider.dart';
 import 'package:recipe_app/Screens/Categories.dart';
+import 'package:recipe_app/Screens/help_page.dart';
 import 'package:recipe_app/Screens/home_Screen.dart';
 import 'package:recipe_app/Screens/login_page.dart';
 import 'package:recipe_app/Styles/styles.dart';
@@ -48,7 +49,9 @@ Drawer menuLateral(context) {
               leading: Icon(Icons.help, color: colorIcons),
               title: Text('Help'),
               onTap: () {
-                print('Continue browsing');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => helpPage()));
               },
             ),
             ListTile(

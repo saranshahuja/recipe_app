@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                 delegate: SliverChildListDelegate([
                   Column(
                     children: <Widget>[
-                      swiperPopular(),
+                      //swiperPopular(),
                       titles('Categories', titlesStyle ),
                       swiperCategories(),
                       titles('Popular Recipes', titlesStyle ),

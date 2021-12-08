@@ -49,7 +49,7 @@ class detail_page extends StatelessWidget {
       ),
     );
   }
-} //Clase
+} //Class
 
 Widget _RecipeBody(Map<String, dynamic> recipe, TextStyle style) {
   return Container(
