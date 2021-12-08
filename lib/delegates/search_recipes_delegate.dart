@@ -31,10 +31,8 @@ class RecipeSearchDelegate extends SearchDelegate {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-        onPressed: () {
-          this.close(context, null);
-        },
-        icon: Icon(Icons.arrow_back_ios));
+        icon: Icon(Icons.arrow_back_ios),
+        onPressed: () => this.close(context, null));
   }
 
   @override
@@ -43,7 +41,7 @@ class RecipeSearchDelegate extends SearchDelegate {
       future: RecipeProvider.loadPopularRecipes(),
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
-        List<dynamic>? recipes = snapshot.data;
+        List<dynamic> RecipeProvider = snapshot.data;
         var recipeWanted = this.query.toLowerCase();
 
         return CustomScrollView(
@@ -51,7 +49,7 @@ class RecipeSearchDelegate extends SearchDelegate {
             SliverList(
                 delegate: SliverChildListDelegate([
               Column(
-                children: recipeListWanted(context, recipes!, recipeWanted),
+                children: recipeListWanted(context, RecipeProvider, recipeWanted),
               )
             ]))
           ],
