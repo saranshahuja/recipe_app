@@ -10,7 +10,7 @@ import 'package:recipe_app/Widgets/titles.dart';
 class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-  // lower code to be fixed!!
+
     final Object? recipe =
         ModalRoute.of(context)!.settings.arguments;
 

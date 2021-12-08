@@ -28,7 +28,7 @@ class CategoriesPage extends StatelessWidget {
             delegate: SliverChildListDelegate([
           titles(categories['name'], titlesStyleCategories),
           FutureBuilder(
-            future: RecipeProvider.carryRecipeCategories( categories!["name"]),
+            future: RecipeProvider.carryRecipeCategories( categories["name"]),
             initialData: [],
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               return Column(
