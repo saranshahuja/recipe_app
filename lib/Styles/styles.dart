@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //Colors
-final colorBG = Color.fromRGBO(244, 252, 255, 1.0);
+final colorBG = Color.fromRGBO(244, 252, 255, 1);
 final colorTitle = Color.fromRGBO(34, 87, 126, 1);
 final colorRecipeDesc = Color.fromRGBO(85, 132, 172, 1);
 final colorIconsAppBar = Color.fromRGBO(183, 195, 206, 1);
@@ -9,10 +9,10 @@ final colorIcons = Color.fromRGBO(34, 87, 126, 1);
 //final colorIcons = Color.fromRGBO(243, 198, 36, 1);
 final colorText = Color.fromRGBO(15, 55, 91, 1);
 
-final color1 = Color.fromRGBO(34, 87, 126, 1);
-final color2 = Color.fromRGBO(85, 132, 172, 1);
-final color3 = Color.fromRGBO(183, 195, 206, 1);
-final color4 = Color.fromRGBO(246, 242, 212, 1);
+// final color1 = Color.fromRGBO(34, 87, 126, 1);
+// final color2 = Color.fromRGBO(85, 132, 172, 1);
+// final color3 = Color.fromRGBO(183, 195, 206, 1);
+// final color4 = Color.fromRGBO(244, 252, 255, 1);
 
 //Texts
 final titlesStyle = TextStyle(
