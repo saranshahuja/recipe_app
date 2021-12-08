@@ -209,9 +209,39 @@
           "ingredientpicture": "https://www.thespruceeats.com/thmb/ZD8NYq4H7vixNEhQVex0oIu7EGw=/3509x2428/filters:no_upscale():max_bytes(150000):strip_icc()/JalapenoChopped-5a9b17926edd650036cf9123.jpg"
         }
       ]
+    },
+    {
+      "title": "Grilled Chicken with Yogurt Garlic Marinade",
+      "photo": "https://www.simplyrecipes.com/thmb/6dEOn8jtlMCXqvEYxLV48gaI4ek=/648x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2008__05__moroccan-spiced-grilled-chicken-vertical-b-600-60fea37db8344d12abfcbe92ebc227a8.jpg",
+      "description": "A dip in a garlicky yogurt marinade keeps these grilled chicken breasts moist and flavorful. A dose of cumin, paprika, and pepper make this grilled marinated chicken a keeper.",
+      "category": "Dinner",
+      "duration": "30 min",
+      "difficulty": "medium",
+      "preparation": "1. Marinate the chicken:\nMix the marinade ingredients (yogurt, lemon juice, cilantro, olive oil, garlic, cumin, paprika, cinnamon, salt, and pepper) together in a medium sized bowl.\n\nAdd the chicken pieces to the bowl and thoroughly coat with the marinade.\n\nCover with plastic wrap and chill in the refrigerator from 2 hours to overnight.\n\n2. Grill the chicken: Heat your grill on high heat if you are using a gas grill, or prepare coals for direct heat if you are using charcoal. Allow for one side of the grill to be the \"cool\" side. If you do not have a grill you can use a cast-iron grill pan on your stove.\n\nGrill the chicken breasts over direct high heat a couple of minutes on one side. Then turn them over and move them to the cool side of the grill. Cover and cook for a few minutes more, until the chicken is cooked through.",
+      "ingredients": [
+        {
+          "ingredients": "1/2 cup plain yoghurt",
+          "ingredientpicture": "https://www.liveeatlearn.com/wp-content/uploads/2015/11/how-to-make-greek-yogurt-11.jpg"
+        },
+        {
+          "ingredients": "2 pounds skinless, boneless chicken breasts",
+          "ingredientpicture": "https://thumbs.dreamstime.com/z/raw-chicken-breast-fillets-skinless-31174043.jpg"
+        },
+        {
+          "ingredients": "1 tablespoon lime juice",
+          "ingredientpicture": "https://previews.123rf.com/images/somchaibb/somchaibb1807/somchaibb180700003/111341293-lime-lemon-juice-for-cooking-with-close-up-view.jpg"
+        },
+        {
+          "ingredients": "1 teaspoon paprika",
+          "ingredientpicture": "https://jamiegeller.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY1NTI1MTc0ODQ1Nzc3NDQ2/paprikajpg.jpg"
+        }
+      ]
     }
   ]
 }
+
+
+
 
 
 
