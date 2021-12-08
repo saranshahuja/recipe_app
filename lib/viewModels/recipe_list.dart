@@ -26,7 +26,7 @@ Widget bodyRecipeList(
     GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => DetailPage()));
+            context, MaterialPageRoute(builder: (context) => detail_page()));
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10.0),
