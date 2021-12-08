@@ -6,7 +6,7 @@ import 'package:recipe_app/Styles/styles.dart';
 //Widgets
 import 'package:recipe_app/Widgets/app_bar_detail.dart';
 import 'package:recipe_app/Widgets/swiper_ingredients.dart';
-
+import 'package:recipe_app/Widgets/titles.dart';
 
 class DetailPage extends StatelessWidget {
   final String description = 'Place the shrimp in the work bowl...';
@@ -19,7 +19,7 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorBG,
       body: CustomScrollView(slivers: <Widget>[
-        appBarDetail(recipe['photo']),
+        appBarDetail(recipe['photo' ]),
         SliverList(
             delegate: SliverChildListDelegate([
           Padding(

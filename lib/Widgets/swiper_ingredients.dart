@@ -6,7 +6,7 @@ final controller = PageController(
   viewportFraction: 0.3
 );
 
-Widget sliderIngredients () {
+Widget sliderIngredients (recipe) {
   return Container(
     height: 120.0,
     padding: EdgeInsets.only(left:5.0),
