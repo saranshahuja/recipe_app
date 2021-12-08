@@ -5,17 +5,17 @@ import 'package:recipe_app/Providers/recipes_provider.dart';
 
 List<Widget> categoryList( BuildContext context){
   final List<Widget> listCategory = [];
-  final List<dynamic> category = RecipeProvider.category;
-  
-  category.forEach((category) {
-    final Widget widgetProv = _imageCategory( context, category );
+  final List<dynamic> categories = RecipeProvider.category;
+
+  categories.forEach((categories) {
+    final Widget widgetProv = imageCategory( context, categories );
     listCategory.add(widgetProv);
   });
   
   return listCategory;
 }
 
-Widget _imageCategory( BuildContext context, Map<String, dynamic> category ) {
+Widget imageCategory( BuildContext context, Map<String, dynamic> category ) {
   return GestureDetector(
     onTap: () {
       Navigator.pushNamed(context, 'category', arguments: category);
@@ -25,18 +25,18 @@ Widget _imageCategory( BuildContext context, Map<String, dynamic> category ) {
         Container(
           width: 130.0,
           height: 100.0,
-          margin: EdgeInsets.only(right: 10.0, top: 10.0, bottom: 10.0),
+          margin: EdgeInsets.only(right: 10.0),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
-            // child: Image(
-            //   //image: networkImage(category['photo']),
-            //   fit: BoxFit.cover,
-            //   ), //Image
+            child: Image(
+              image: NetworkImage(category['photo']),
+              fit: BoxFit.contain,
+              ), //Image
             )), //ClipRRect //Container
         Container(
           alignment: Alignment.bottomLeft,
           padding: EdgeInsets.all(20.0),
-          child: Text('Name',
+          child: Text('name',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,

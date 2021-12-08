@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Providers/auth_provider.dart';
+import 'package:recipe_app/Screens/Categories.dart';
+import 'package:recipe_app/Screens/home_Screen.dart';
 import 'package:recipe_app/Screens/login_page.dart';
 import 'package:recipe_app/Styles/styles.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,14 +30,18 @@ Drawer menuLateral(context) {
               leading: Icon(Icons.all_inclusive, color: colorIcons),
               title: Text('All Recipes'),
               onTap: () {
-                print('Continue browsing');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()));
               },
             ),
             ListTile(
               leading: Icon(Icons.fastfood, color: colorIcons),
               title: Text('Categories'),
               onTap: () {
-                print('Continue browsing');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CategoriesPage()));
               },
             ),
             ListTile(
@@ -46,7 +52,7 @@ Drawer menuLateral(context) {
               },
             ),
             ListTile(
-              leading: Icon(Icons.power, color: Colors.red),
+              leading: Icon(Icons.power_settings_new, color: Colors.red),
               title: Text('Logout', style: TextStyle(
                 color: Colors.black,
 

@@ -14,7 +14,6 @@ class swiperCategories extends StatelessWidget {
       height: 110.0,
       margin: EdgeInsets.symmetric(vertical: 10.0),
       child: Swiper(
-
          itemBuilder: (BuildContext context, int index) {
            return FutureBuilder(
              future: RecipeProvider.carryCategory(),

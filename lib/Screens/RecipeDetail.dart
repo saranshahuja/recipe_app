@@ -93,7 +93,7 @@ Widget _RecipeBody(Map<String, dynamic> recipe, TextStyle style) {
                     ],
                   )),
               Expanded(
-                  flex: 2,
+                  flex: 1,
                   child: Row(
                     children: <Widget>[
                       Icon(Icons.fastfood, color: colorIcons),
