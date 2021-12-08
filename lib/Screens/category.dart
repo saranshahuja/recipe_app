@@ -14,12 +14,12 @@
 //   @override
 //   Widget build(BuildContext context) {
 //
-//     final Map<String,dynamic> recipe = ModalRoute.of(context).settings.arguments;
+//     final Map<String,dynamic> recipe = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
 //
 //     return Scaffold(
 //       backgroundColor: colorBG,
 //       body: CustomScrollView(slivers: <Widget>[
-//         appBarDetail(recipe['photo' ]),
+//         appBarDetail(recipe['photo'], recipe: []),
 //         SliverList(
 //             delegate: SliverChildListDelegate([
 //           Padding(

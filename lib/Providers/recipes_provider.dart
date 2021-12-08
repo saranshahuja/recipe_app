@@ -14,7 +14,7 @@ Future<List<dynamic>> loadPopularRecipes() async {
   final List<dynamic> tempRecipeList = [];
   await firestore.collection('Recipes').get().then((QuerySnapshot querySnapshot) => {
     querySnapshot.docs.forEach((doc) {
-      Map<String, dynamic>? recipeMap = doc.data() as Map<String, dynamic>?;
+      Map<String, dynamic> recipeMap = doc.data() as Map<String, dynamic>;
       tempRecipeList.add(recipeMap);
     })
   });
@@ -24,24 +24,24 @@ Future<List<dynamic>> loadPopularRecipes() async {
 }
 
 Future<List<dynamic>> carryCategory() async {
-  final List<dynamic> tempCategoryList = [];
+  final List<dynamic> tempCategoriesList = [];
   await firestore.collection('categories').get().then((QuerySnapshot querySnapshot) => {
     querySnapshot.docs.forEach((doc) {
-      Map<String, dynamic>? categoriesMap = doc.data() as Map<String, dynamic>?;
-      tempCategoryList.add(categoriesMap);
+      Map<String, dynamic> categoriesMap = doc.data() as Map<String, dynamic>;
+      tempCategoriesList.add(categoriesMap);
     })
   });
-  category = tempCategoryList;
+  category = tempCategoriesList;
   return category;
 
 }
 
 Future<List<dynamic>> carryRecipeCategories(String categories) async {
   final List<dynamic> tempCategoryList = [];
-  await firestore.collection('categories').get().then((QuerySnapshot querySnapshot) => {
+  await firestore.collection(categories).get().then((QuerySnapshot querySnapshot) => {
     querySnapshot.docs.forEach((doc) {
-      Map<String, dynamic>? categoriesMap = doc.data() as Map<String, dynamic>?;
-      tempCategoryList.add(categoriesMap);
+      Map<String, dynamic>? categoryMap = doc.data() as Map<String, dynamic>?;
+      tempCategoryList.add(categoryMap);
     })
   });
   category = tempCategoryList;

@@ -22,7 +22,7 @@ class RecipeSearchDelegate extends SearchDelegate {
     return [
       IconButton(
           onPressed: () {
-            this.query = '';
+            this.query = ' ';
           },
           icon: Icon(Icons.clear))
     ];

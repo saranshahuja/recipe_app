@@ -45,7 +45,7 @@ Widget _bodyRecipeList(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            recipe['Title'],
+            recipe['title'],
             textAlign: TextAlign.left,
             style: titlesRecipeStyle,
           ), //Text
