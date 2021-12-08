@@ -47,9 +47,9 @@ final descriptionRecipeStyle = TextStyle(
 
 final helpPageTextStyle = TextStyle(
     fontFamily: 'Avenir',
-    fontWeight: FontWeight.bold,
+    //fontWeight: FontWeight.bold,
     color: colorIcons,
-    fontSize: 20.0);
+    fontSize: 18.0);
 
 //Menu
 final styleTextMenuLateral = TextStyle(

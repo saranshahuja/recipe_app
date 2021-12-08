@@ -18,12 +18,13 @@ class helpPage extends StatelessWidget {
                   padding:
                   const EdgeInsets.only(top: 10.0, right: 8.0, bottom: 8.0),
                   child: _helpBody(''
-                      'To return to the Home Page at any point, tap the menu button and tap the \'Home\' Button.\n'
-                      'To view all Recipes, open the menu and tap the \'All Recipes button\'.\n'
-                      'To logout, open the menu and tap the \'Logout\' Button.\n'
-                      'To search for a specific recipe click the search icon in the top right and enter your key words.\n'
+                      'To return to the Home Page at any point, tap the menu button and tap the \'Home\' Button.\n\n'
+                      'To view all Recipes, open the menu and tap the \'All Recipes button\'.\n\n'
+                      'To logout, open the menu and tap the \'Logout\' Button.\n\n'
+                      'To search for a specific recipe click the search icon in the top right and enter your key words.\n\n'
                       'Tip: The search function works best for searching for specific ingredients you want to use, '
-                      'for example searching \'Chicken\' will bring upp all available chicken recipes!'
+                      'for example searching \'Chicken\' will bring up all available chicken recipes!\n\n'
+                      'Please direct acny other concerns to help@bitsandbytes.com\n\n'
                   )
                 ),
               ])
@@ -31,10 +32,7 @@ class helpPage extends StatelessWidget {
           ]
         )
       );
-
   }
-
-
 }
 
 Widget _helpBody(String text) {
