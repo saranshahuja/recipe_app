@@ -4,6 +4,7 @@ import 'package:recipe_app/Screens/Categories.dart';
 import 'package:recipe_app/Screens/help_page.dart';
 import 'package:recipe_app/Screens/home_Screen.dart';
 import 'package:recipe_app/Screens/login_page.dart';
+import 'package:recipe_app/Screens/all_recipes.dart';
 import 'package:recipe_app/Styles/styles.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -28,8 +29,8 @@ Drawer menuLateral(context) {
                   child: Text('Bits and Bytes', style: styleTextMenuLateral),
                 )),
             ListTile(
-              leading: Icon(Icons.all_inclusive, color: colorIcons),
-              title: Text('All Recipes'),
+              leading: Icon(Icons.home, color: colorIcons),
+              title: Text('Home'),
               onTap: () {
                 Navigator.push(
                     context,
@@ -37,12 +38,12 @@ Drawer menuLateral(context) {
               },
             ),
             ListTile(
-              leading: Icon(Icons.fastfood, color: colorIcons),
-              title: Text('Categories'),
+              leading: Icon(Icons.all_inclusive, color: colorIcons),
+              title: Text('All Recipes'),
               onTap: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => CategoriesPage()));
+                    MaterialPageRoute(builder: (context) => allRecipes()));
               },
             ),
             ListTile(
