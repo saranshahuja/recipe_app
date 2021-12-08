@@ -26,8 +26,10 @@ Drawer menuLateral(context) {
                         fit: BoxFit.cover)),
                 child: Container(
                   alignment: Alignment.center,
-                  child: Text('Bits and Bytes', style: styleTextMenuLateral),
-                )),
+                  child:
+                    Text('Bits and Bytes', style: styleTextMenuLateral)
+              )
+            ),
             ListTile(
               leading: Icon(Icons.home, color: colorIcons),
               title: Text('Home'),
@@ -56,7 +58,7 @@ Drawer menuLateral(context) {
               },
             ),
             ListTile(
-              leading: Icon(Icons.power_settings_new, color: Colors.red),
+              leading: Icon(Icons.power_settings_new, color: Color.fromRGBO(250, 117, 110, 1)),
               title: Text('Logout', style: TextStyle(
                 color: Colors.black,
 
