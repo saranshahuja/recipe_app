@@ -155,9 +155,38 @@
           "ingredientpicture": "https://media.istockphoto.com/photos/uncooked-chicken-picture-id488535226?k=20&m=488535226&s=612x612&w=0&h=OyOVsFFCCMH56GquZr3TsOePSOBclNpcNusUI29xXPw="
         }
       ]
+    },
+    {
+      "title": "Chicken Salad sandwich",
+      "photo": "https://hips.hearstapps.com/del.h-cdn.co/assets/17/32/2048x1024/landscape-1502305153-chicken-salad-sandwich-delish-1.jpg?resize=980:*",
+      "description": "Who doesn't love a good chicken salad sandwich? We love this salad between two slices of toasted sourdough or baguette, but it's also great straight up.\n",
+      "category": "Lunch",
+      "duration": "25 min",
+      "difficulty": "Easy",
+      "preparation": "1. In a large pot, arrange the chicken in a single layer. Place lemon slices and dill sprigs on chicken and pour water over it, covering by at least an inch. Bring water to a boil, then reduce heat and simmer until cooked through, 10 minutes. Let rest 10 minutes, then slice into 1\" pieces. \n\n2. In a large bowl, combine chicken, apple, onion, and celery.\n\n3. In a medium bowl, whisk together mayonnaise, Dijon, and vinegar and season with salt and pepper.\n\n 4. Pour dressing over chicken mixture and toss.\n\n5. Garnish with chopped dill and serve on a baguette with lettuce.   ",
+      "ingredients": [
+        {
+          "ingredients": "2/3 cup mayonnaise",
+          "ingredientpicture": "https://post.healthline.com/wp-content/uploads/2020/08/is-mayo-dairy-1200x628-facebook-1200x628.jpg"
+        },
+        {
+          "ingredients": "3 boneless skinless chicken breasts",
+          "ingredientpicture": "https://thumbs.dreamstime.com/z/raw-chicken-breast-fillets-skinless-31174043.jpg"
+        },
+        {
+          "ingredients": "1/2 red onion, finely chopped",
+          "ingredientpicture": "https://previews.123rf.com/images/qwartm/qwartm1712/qwartm171200168/92095137-finely-chopped-red-onion-on-cutting-board.jpg"
+        },
+        {
+          "ingredients": "baguette for serving",
+          "ingredientpicture": "https://upload.wikimedia.org/wikipedia/commons/8/86/Baguettes%2C_Paris%2C_France_-_panoramio.jpg"
+        }
+      ]
     }
   ]
 }
+
+
 
 
 
