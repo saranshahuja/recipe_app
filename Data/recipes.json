@@ -10,9 +10,14 @@
       "duration": "",
       "difficulty": "easy" ,
       "preparation": "",
-      "ingredients": []
+      "ingredients": [
+        {
+          "ingredients": "",
+          "PhotoIngredients": ""
 
-      
+
+        }
+      ]
     }
     
 
