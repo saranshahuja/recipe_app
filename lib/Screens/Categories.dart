@@ -14,8 +14,8 @@ class CategoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    final Map<String, dynamic> categories = ModalRoute.of(context).settings.arguments;
+//lower line code to be fixed!!
+    final Object? categories = ModalRoute.of(context)!.settings.arguments;
 
     return Scaffold(
       drawer: menuLateral(context),
@@ -28,7 +28,7 @@ class CategoriesPage extends StatelessWidget {
             delegate: SliverChildListDelegate([
           titles(categories['name'], titlesStyleCategories),
           FutureBuilder(
-            future: RecipeProvider.carryRecipeCategories( categories['name']),
+            future: RecipeProvider.carryRecipeCategories( categories!["name"]),
             initialData: [],
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               return Column(

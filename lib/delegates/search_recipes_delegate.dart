@@ -41,7 +41,8 @@ class RecipeSearchDelegate extends SearchDelegate {
       future: RecipeProvider.loadPopularRecipes(),
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
-        List<dynamic> RecipeProvider = snapshot.data;
+        //lower line code to be fixed
+        List? RecipeProvider = snapshot.data;
         var recipeWanted = this.query.toLowerCase();
 
         return CustomScrollView(
@@ -49,7 +50,7 @@ class RecipeSearchDelegate extends SearchDelegate {
             SliverList(
                 delegate: SliverChildListDelegate([
               Column(
-                children: recipeListWanted(context, RecipeProvider, recipeWanted),
+                children: recipeListWanted(context, RecipeProvider!, recipeWanted),
               )
             ]))
           ],
