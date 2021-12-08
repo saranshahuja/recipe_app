@@ -24,7 +24,7 @@ class helpPage extends StatelessWidget {
                       'To search for a specific recipe click the search icon in the top right and enter your key words.\n\n'
                       'Tip: The search function works best for searching for specific ingredients you want to use, '
                       'for example searching \'Chicken\' will bring up all available chicken recipes!\n\n'
-                      'Please direct acny other concerns to help@bitsandbytes.com\n\n'
+                      'Please direct any other concerns to help@bitsandbytes.com\n\n'
                   )
                 ),
               ])
