@@ -15,20 +15,20 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final Map<String, dynamic>? categories = ModalRoute.of(context).settings.arguments;
+    final Map<String, dynamic> categories = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
       drawer: menuLateral(context),
       key: _scaffoldKey,
       backgroundColor: colorBG,
       body: CustomScrollView(slivers: <Widget>[
-        appBar(context, _scaffoldKey),
-       // appBarCategoria(categories),
+       // appBar(context, _scaffoldKey),
+        appBarCategory('Pizza'),
         SliverList(
             delegate: SliverChildListDelegate([
-          titles('Pizza', titlesStyleCategories),
+          titles(categories['name'], titlesStyleCategories),
           FutureBuilder(
-            future: RecipeProvider.carryRecipeCategories(['name']),
+            future: RecipeProvider.carryRecipeCategories( categories['name']),
             initialData: [],
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               return Column(
