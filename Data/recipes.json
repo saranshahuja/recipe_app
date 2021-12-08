@@ -182,9 +182,39 @@
           "ingredientpicture": "https://upload.wikimedia.org/wikipedia/commons/8/86/Baguettes%2C_Paris%2C_France_-_panoramio.jpg"
         }
       ]
+    },
+    {
+      "title": "Avocado Chicken Salad",
+      "photo": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190517-delish-avocado-chicken-salad-ehg-223-jpg-1558553121.jpg?crop=0.573xw:0.860xh;0.238xw,0.0842xh&resize=980:*",
+      "description": "We love this salad served on top of greens as much as we love it between two slices of sourdough bread. If you can't find a good ripe mango, pineapple would be delicious as well!",
+      "category": "Lunch",
+      "duration": "30 min",
+      "difficulty": "Easy",
+      "preparation": "1. Make dressing: In a medium bowl, whisk to combine dressing ingredients and season with salt and pepper.\n\n2. In a large bowl, combine salad ingredients and prepared dressing. Gently toss until salad is coated in dressing, then season to taste with salt and pepper. ",
+      "ingredients": [
+        {
+          "ingredients": "2 avocados cubed",
+          "ingredientpicture": "https://previews.123rf.com/images/tonyoquias/tonyoquias1107/tonyoquias110700045/10087879-close-up-of-cubed-ripe-avocado-fruit-on-white-plate.jpg"
+        },
+        {
+          "ingredients": "2 boneless skinless chicken breasts",
+          "ingredientpicture": "https://thumbs.dreamstime.com/z/raw-chicken-breast-fillets-skinless-31174043.jpg"
+        },
+        {
+          "ingredients": "1/4 lime juice",
+          "ingredientpicture": "https://previews.123rf.com/images/somchaibb/somchaibb1807/somchaibb180700003/111341293-lime-lemon-juice-for-cooking-with-close-up-view.jpg"
+        },
+        {
+          "ingredients": "1 tablespoon minced jalapeño",
+          "ingredientpicture": "https://www.thespruceeats.com/thmb/ZD8NYq4H7vixNEhQVex0oIu7EGw=/3509x2428/filters:no_upscale():max_bytes(150000):strip_icc()/JalapenoChopped-5a9b17926edd650036cf9123.jpg"
+        }
+      ]
     }
   ]
 }
+
+
+
 
 
 
