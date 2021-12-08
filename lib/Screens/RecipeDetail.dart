@@ -7,7 +7,7 @@ import 'package:recipe_app/Widgets/app_bar_detail.dart';
 import 'package:recipe_app/Widgets/swiper_ingredients.dart';
 import 'package:recipe_app/Widgets/titles.dart';
 
-class DetailPage extends StatelessWidget {
+class detail_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
@@ -18,7 +18,7 @@ class DetailPage extends StatelessWidget {
       backgroundColor: colorBG,
       body: CustomScrollView(
         slivers: <Widget>[
-          appBarDetail(recipe ["photo"], recipe: []),
+          appBarDetail(recipe['photo'], recipe: ['photo']),
           SliverList(
               delegate: SliverChildListDelegate([
                 Padding(
@@ -35,7 +35,7 @@ class DetailPage extends StatelessWidget {
                   height: 15.0,
                 ),
                 titles('Preparation', titlesStyle),
-                _textDescription(recipe['preparation']),
+                _textoDescription(recipe['preparation']),
                 SizedBox(
                   height: 35.0,
                 ),
@@ -113,7 +113,7 @@ Widget _RecipeBody(Map<String, dynamic> recipe, TextStyle style) {
   );
 }
 
-Widget _textDescription(String text) {
+Widget _textoDescription(String text) {
   return Container(
     margin: EdgeInsets.only(top: 5.0, left: 30.0, right: 30.0),
     child: Text(
