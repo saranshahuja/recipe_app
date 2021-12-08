@@ -11,31 +11,30 @@ class detail_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final Map<String,dynamic> recipe =
-        ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
+    final Map<String, dynamic> recipes = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
 
     return Scaffold(
       backgroundColor: colorBG,
       body: CustomScrollView(
         slivers: <Widget>[
-          appBarDetail(recipe['photo'], recipe: ['photo']),
+          appBarDetail(recipes['photo']),
           SliverList(
               delegate: SliverChildListDelegate([
                 Padding(
                   padding:
                   const EdgeInsets.only(top: 10.0, right: 8.0, bottom: 8.0),
-                  child: _RecipeBody(recipe, titlesRecipeStyleDetail),
+                  child: _RecipeBody(recipes, titlesRecipeStyleDetail),
                 ),
                 titles('Ingredients', titlesStyle),
                 SizedBox(
                   height: 20.0,
                 ),
-                sliderIngredients(recipe['ingredients']),
+                sliderIngredients(recipes['ingredients']),
                 SizedBox(
                   height: 15.0,
                 ),
                 titles('Preparation', titlesStyle),
-                _textDescription(recipe['preparation']),
+                _textDescription(recipes['preparation']),
                 SizedBox(
                   height: 35.0,
                 ),

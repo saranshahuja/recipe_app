@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Styles/styles.dart';
 
-Widget appBarDetail( String image, {required List<String> recipe}) {
+Widget appBarDetail( String image) {
   return SliverAppBar(
     backgroundColor: colorBG,
     expandedHeight: 200.0,
