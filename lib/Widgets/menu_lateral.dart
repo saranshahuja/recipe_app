@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Providers/auth_provider.dart';
 import 'package:recipe_app/Styles/styles.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Drawer menuLateral(context) {
   return Drawer(
+
     elevation: 0.0,
     child: SafeArea(
       child: Container(
@@ -39,6 +42,14 @@ Drawer menuLateral(context) {
               title: Text('Help'),
               onTap: () {
                 print('Continue browsing');
+              },
+            ),
+            ListTile(
+              minVerticalPadding: 1000,
+              leading: Icon(Icons.power, color: Colors.red),
+              title: Text('Logout',),
+              onTap: () {
+                print('logout');
               },
             )
           ],

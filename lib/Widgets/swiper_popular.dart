@@ -33,10 +33,10 @@ class swiperPopular extends StatelessWidget {
 
   Widget _target() {
     return Container(
-      margin: EdgeInsets.only(left:30.0),
-      alignment: AlignmentDirectional.centerEnd,
+      margin: EdgeInsets.all(10.0),
+      alignment: AlignmentDirectional.center,
       child: Image(
-        image: AssetImage('assets/recipe-slider1.png'),
+        image: AssetImage('assets/recipeSlider1.png'),
         fit: BoxFit.fill,
       ),
     );

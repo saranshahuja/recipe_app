@@ -11,12 +11,16 @@ import 'package:recipe_app/Widgets/menu_lateral.dart';
 import 'package:recipe_app/Widgets/swiper_categories.dart';
 import 'package:recipe_app/Widgets/swiper_popular.dart';
 import 'package:recipe_app/Widgets/titles.dart';
+import 'package:recipe_app/viewModels/recipe_list.dart';
 
 class HomeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
+
+
   @override
   Widget build(BuildContext context) {
+
     RecipeProvider.loadPopularRecipes();
 
     return Scaffold(
@@ -25,24 +29,69 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: colorBG,
         body: CustomScrollView(
           slivers: <Widget>[
-            appBar(context, _scaffoldKey),
+            appBar( context, _scaffoldKey ),
             SliverList(
-              delegate: SliverChildListDelegate([
-                Column(children: <Widget>[
-                  swiperPopular(),
-                  titles('Categories', titlesStyle),
-                  swiperCategories(),
-                  titles('Popular Recipes', titlesStyle),
-                  RecipeList(),
-                   RecipeList(),
-                   RecipeList(),
-                  RecipeList(),
-                  RecipeList(),
-                  RecipeList()
-                ])
-              ]),
-            )
+                delegate: SliverChildListDelegate([
+                  Column(
+                    children: <Widget>[
+                      swiperPopular(),
+                      titles('Categories', titlesStyle ),
+                      swiperCategories(),
+                      titles('Popular Recipes', titlesStyle ),
+                      FutureBuilder(
+                          future: RecipeProvider.loadPopularRecipes(),
+                          initialData: [],
+                          builder: ( BuildContext context, snapshot ) {
+
+                            return Column(
+                              children: recipeList( context, snapshot.data as List<dynamic>),
+                            );
+                          }
+                      )
+
+                    ],
+                  )
+                ]))
           ],
         ));
   }
 }
+
+/*
+class HomeScreen extends StatelessWidget {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    RecipeProvider.loadPopularRecipes();
+
+    return SafeArea(
+      child: Scaffold(
+          drawer: menuLateral(context),
+          key: _scaffoldKey,
+          backgroundColor: colorBG,
+          body: CustomScrollView(
+            slivers: <Widget>[
+              appBar(context, _scaffoldKey),
+              SliverList(
+                delegate: SliverChildListDelegate([
+                  Column(children: <Widget>[
+                    swiperPopular(),
+                    titles('Categories', titlesStyle),
+                    swiperCategories(),
+                    titles('Popular Recipes', titlesStyle),
+                    RecipeList(),
+                     RecipeList(),
+                     RecipeList(),
+                    RecipeList(),
+                    RecipeList(),
+                    RecipeList()
+                  ])
+                ]),
+              )
+            ],
+          )),
+    );
+  }
+}
+*/

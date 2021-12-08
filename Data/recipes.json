@@ -67,5 +67,26 @@
         }
       ]
     }
+  ],
+
+
+  "categories": [
+    {
+      "name" : "Snacks",
+      "photo" : " "
+    }
   ]
+}
+
+
+],
+
+"Snacks": [
+
+],
+
+"Desserts": [
+
+]
+}
 }

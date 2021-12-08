@@ -14,18 +14,19 @@ class swiperCategories extends StatelessWidget {
       height: 110.0,
       margin: EdgeInsets.symmetric(vertical: 10.0),
       child: Swiper(
-        itemBuilder: (BuildContext context, int index) {
-          return FutureBuilder(
-            future: RecipeProvider.carryCategory(),
-            initialData: [],
-            builder: (BuildContext context, AsyncSnapshot snapshot ) {
-              return PageView(
-                  controller: controller, children: categoryList( context ));
-            },
-          );
-        },
+
+         itemBuilder: (BuildContext context, int index) {
+           return FutureBuilder(
+             future: RecipeProvider.carryCategory(),
+             initialData: [],
+             builder: (BuildContext context, AsyncSnapshot snapshot) {
+               return PageView(
+                   controller: controller, children: categoryList(context));
+             },
+           );
+         },
         itemCount: 1,
-        layout: SwiperLayout.DEFAULT,
+         layout: SwiperLayout.DEFAULT,
       ),
     );
   }

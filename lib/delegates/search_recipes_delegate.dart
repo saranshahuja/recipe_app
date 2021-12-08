@@ -42,7 +42,7 @@ class RecipeSearchDelegate extends SearchDelegate {
       initialData: [],
       builder: (BuildContext context, AsyncSnapshot<List<dynamic>> snapshot) {
         //lower line code to be fixed
-        List<dynamic> RecipeProvider = snapshot.data;
+        List<dynamic>? RecipeProvider = snapshot.data;
         var recipeWanted = this.query.toLowerCase();
 
         return CustomScrollView(
