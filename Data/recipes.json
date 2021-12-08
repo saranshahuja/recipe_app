@@ -66,26 +66,48 @@
           "ingredientpicture": "https://previews.123rf.com/images/valery121283/valery1212831907/valery121283190700777/127749137-raw-chicken-legs-isolated-on-white-background.jpg"
         }
       ]
-    }
-  ],
-
-
-  "categories": [
+    },
     {
-      "name" : "Snacks",
-      "photo" : " "
+      "title": "Turmeric Chicken Flatbread",
+      "photo": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2020/05/14/0/FNK_TURMERIC-CHICKEN-NAAN-FLATBREAD-H_s4x3.jpg.rend.hgtvcom.826.620.suffix/1589468324881.jpeg",
+      "description": "Widely used throughout Southeast Asia, turmeric adds distinct color, aroma, and flavor to both sweet and savory dishes. We've combined it with pumpkin pie spice (rich with cinnamon, ginger and cloves) to make a quick seasoning for skinless chicken thighs. Served on top of crispy naan and drizzled with a tangy yogurt sauce, you've got a complete meal in just 20 minutes!",
+      "category": "Dinner",
+      "duration": "20 min",
+      "difficulty": "Easy",
+      "preparation": "1. Preheat the broiler. Combine the vinegar, honey and 1/2 teaspoon salt in a medium bowl. Add the jalapenos and stir gently to cover. Set aside.\n\n2. Toss the chicken with the pumpkin pie spice, 1 teaspoon of the turmeric, 1 tablespoon of the olive oil, 1 teaspoon salt and a few grinds of black pepper in a large bowl. Heat 2 tablespoons olive in a large nonstick skillet over medium-high heat. Add the chicken and cook, tossing occasionally, until the chicken is no longer pink in the middle and is crispy in some spots, 10 to 12 minutes. Transfer the chicken to a plate and add the spinach and 1 clove garlic. Cook, stirring occasionally, until the spinach is just wilted and still a vibrant green, 1 to 2 minutes.\n\n3. Meanwhile, whisk the yogurt with the lemon juice, the remaining 1/2 teaspoon turmeric, remaining garlic clove, 1/4 teaspoon salt and a few grinds of black pepper in a medium bowl until smooth.\n\nPlace the naan on a baking sheet and brush the pieces with the remaining 1 tablespoon olive oil. Broil until crispy and charred in places, 2 to 3 minutes.\n\nTop each piece of naan with some spinach, then with chicken, pickled jalapenos and cilantro leaves. Drizzle with the yogurt sauce. Serve warm. ",
+      "ingredients": [
+        {
+          "ingredients": "1/4 cup red wine vinegar",
+          "ingredientpicture": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/324844_2200-1200x628.jpg"
+        },
+
+
+            {
+              "ingredients": "2 red jalepenos, thinly sliced",
+              "ingredientpicture": "https://thertwguys.com/wp-content/uploads/2019/02/jalapeno-sambal-balado-ingredients-1024x768.jpg"
+            },
+            {
+              "ingredients": "1 pound boneless, skinless chicken thighs",
+              "ingredientpicture": "https://previews.123rf.com/images/funandrejss/funandrejss1702/funandrejss170200221/72882880-raw-free-range-boneless-skinless-chicken-thighs-with-thime-on-stone-table.jpg"
+            },
+            {
+              "ingredients": "1/3 cup plain whole milk yogurt",
+              "ingredientpicture": "https://www.feastingathome.com/wp-content/uploads/2012/09/Granola-3850.jpg"
+            },
+            {
+              "ingredients": "2 cloves garlic, grated ",
+              "ingredientpicture": "https://www.mashed.com/img/gallery/why-you-should-be-grating-your-garlic/l-intro-1614339156.jpg"
+            }
+          ]
+        }
+      ]
     }
-  ],
 
 
 
 
 
-"Snacks": [
 
-],
 
-"Desserts": [
 
-]
-}
+
