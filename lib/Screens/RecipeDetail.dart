@@ -35,7 +35,7 @@ class DetailPage extends StatelessWidget {
                   height: 15.0,
                 ),
                 titles('Preparation', titlesStyle),
-                _textoDescripcion(recipe['preparation']),
+                _textoDescription(recipe['preparation']),
                 SizedBox(
                   height: 35.0,
                 ),
@@ -113,11 +113,11 @@ Widget _RecipeBody(Map<String, dynamic> recipe, TextStyle style) {
   );
 }
 
-Widget _textoDescripcion(String texto) {
+Widget _textoDescription(String text) {
   return Container(
     margin: EdgeInsets.only(top: 5.0, left: 30.0, right: 30.0),
     child: Text(
-      texto,
+      text,
       textAlign: TextAlign.left,
       style: TextStyle(
           fontFamily: 'Avenir',
