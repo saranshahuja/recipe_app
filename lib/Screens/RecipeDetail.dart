@@ -19,7 +19,6 @@ class detail_page extends StatelessWidget {
 
 
 
-
     return Scaffold(
       backgroundColor: colorBG,
       body: CustomScrollView(

@@ -15,7 +15,7 @@ class CategoriesPage extends StatefulWidget {
   @override
   Widget build(BuildContext context, ScopedReader watch) {
 //lower line code to be fixed!!
-    final Map<String, dynamic>? categories = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
+    final categories = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>?;
     final _auth = watch(authServiesProvider);
 
     return Scaffold(
