@@ -39,7 +39,7 @@ Widget bodyRecipeList(
     ), //GestureDetector
     Container(
       alignment: AlignmentDirectional.topStart,
-      margin: EdgeInsets.only(left: 30.0, top: 10.0),
+      margin: EdgeInsets.only(left: 30.0, top: 10.0, right: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
