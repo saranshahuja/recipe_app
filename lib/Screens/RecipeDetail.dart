@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:recipe_app/Providers/recipes_provider.dart';
 //Style
 import 'package:recipe_app/Styles/styles.dart';
 
@@ -8,10 +10,15 @@ import 'package:recipe_app/Widgets/swiper_ingredients.dart';
 import 'package:recipe_app/Widgets/titles.dart';
 
 class detail_page extends StatelessWidget {
+  static const routeName = 'details';
   @override
   Widget build(BuildContext context) {
 
-    final Map<String, dynamic> recipes = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
+
+    final recipes = ModalRoute.of(context)!.settings.arguments as Map<String,dynamic>;
+
+
+
 
     return Scaffold(
       backgroundColor: colorBG,

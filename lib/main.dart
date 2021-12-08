@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:recipe_app/Screens/Categories.dart';
+import 'package:recipe_app/Screens/RecipeDetail.dart';
+import 'package:recipe_app/Screens/home_Screen.dart';
 import 'package:recipe_app/Services/start_page.dart';
 import 'package:sizer/sizer.dart';
 
@@ -34,7 +37,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         //appBar
-        home: StartPage());
+        home: StartPage(),
+        routes: <String,WidgetBuilder> {
+          'category' : ( BuildContext context ) => CategoriesPage(),
+          'detail' : ( BuildContext context ) => detail_page(),
+        });
 
   }),
     ); //MaterialApp
