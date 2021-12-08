@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/Providers/auth_provider.dart';
+import 'package:recipe_app/Screens/login_page.dart';
 import 'package:recipe_app/Styles/styles.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -45,10 +46,15 @@ Drawer menuLateral(context) {
               },
             ),
             ListTile(
-              minVerticalPadding: 1000,
               leading: Icon(Icons.power, color: Colors.red),
-              title: Text('Logout',),
+              title: Text('Logout', style: TextStyle(
+                color: Colors.black,
+
+
+              ),),
               onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Login()));
                 print('logout');
               },
             )
