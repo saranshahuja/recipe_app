@@ -11,8 +11,8 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final Object? recipe =
-        ModalRoute.of(context)!.settings.arguments;
+    final Map<String,dynamic> recipe =
+        ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
       backgroundColor: colorBG,
@@ -34,8 +34,8 @@ class DetailPage extends StatelessWidget {
                 SizedBox(
                   height: 15.0,
                 ),
-                titles('Preparations', titlesStyle),
-                _textoDescripcion(recipe['preparations']),
+                titles('Preparation', titlesStyle),
+                _textoDescripcion(recipe['preparation']),
                 SizedBox(
                   height: 35.0,
                 ),

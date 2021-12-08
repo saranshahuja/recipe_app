@@ -15,7 +15,7 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 //lower line code to be fixed!!
-    final Object? categories = ModalRoute.of(context)!.settings.arguments;
+    final Map<String, dynamic> categories = ModalRoute.of(context).settings.arguments;
 
     return Scaffold(
       drawer: menuLateral(context),
