@@ -7,7 +7,7 @@ Widget appBar(BuildContext context, GlobalKey<ScaffoldState> key) {
     floating: false,
     leading: GestureDetector(
       onTap: () {
-        key.currentState.openDrawer();
+        key.currentState!.openDrawer();
       },
       child: Container(
         padding: EdgeInsets.all(15.0),
