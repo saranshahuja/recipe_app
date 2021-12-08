@@ -23,7 +23,7 @@ Widget _image( Map<String,dynamic> ingredients ) {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: Image(
-                image: NetworkImage( ingredients['PhotoIngredients'] ),
+                image: NetworkImage( ingredients['ingredientpicture'] ),
                 //color: colorTitle,
                 //colorBlendMode: BlendMode.overlay,
                 fit: BoxFit.cover,
