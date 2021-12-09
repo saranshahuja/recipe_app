@@ -34,9 +34,8 @@ Drawer menuLateral(context) {
               leading: Icon(Icons.home, color: colorIcons),
               title: Text('Home'),
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                Route route = MaterialPageRoute(builder: (context) => HomeScreen());
+                Navigator.of(context).popUntil((route) => route.settings.name == '/');
               },
             ),
             ListTile(

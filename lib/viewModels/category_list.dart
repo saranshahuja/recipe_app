@@ -7,8 +7,8 @@ List<Widget> categoryList( BuildContext context){
   final List<Widget> listCategory = [];
   final List<dynamic> categories = RecipeProvider.category;
 
-  categories.forEach((categories) {
-    final Widget widgetProv = imageCategory( context, categories );
+  categories.forEach((category) {
+    final Widget widgetProv = imageCategory( context, category );
     listCategory.add(widgetProv);
   });
   
@@ -29,14 +29,14 @@ Widget imageCategory( BuildContext context, Map<String, dynamic> category ) {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
             child: Image(
-              image: NetworkImage(category['photo']),
-              fit: BoxFit.contain,
+              image: NetworkImage('${category['photo']}'),
+              fit: BoxFit.fill,
               ), //Image
             )), //ClipRRect //Container
         Container(
           alignment: Alignment.bottomLeft,
           padding: EdgeInsets.all(20.0),
-          child: Text('name',
+          child: Text('${category['name']}',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,

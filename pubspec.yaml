@@ -70,6 +70,7 @@ flutter:
   assets:
     - assets/loginpage_image.jpg
     - assets/pasta.jpg
+    - assets/homescreen.jpg
     - Data/recipes.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
