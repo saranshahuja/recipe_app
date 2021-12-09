@@ -37,14 +37,14 @@ Future<List<dynamic>> carryCategory() async {
 
 Future<List<dynamic>> carryRecipeCategories(String categories) async {
   final List<dynamic> tempCategoryList = [];
-  await firestore.collection(categories).get().then((QuerySnapshot querySnapshot) => {
+  await firestore.collection("Recipes").where('category', isEqualTo: categories).get().then((QuerySnapshot querySnapshot) => {
     querySnapshot.docs.forEach((doc) {
       Map<String, dynamic>? categoryMap = doc.data() as Map<String, dynamic>?;
       tempCategoryList.add(categoryMap);
     })
   });
-  category = tempCategoryList;
-  return category;
+  recipeCategories = tempCategoryList;
+  return recipeCategories;
 
 }
 }
